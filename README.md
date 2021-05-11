@@ -24,11 +24,12 @@ encambio la declarada lee si esta primera la declaracion o al ultimo
 
 Elimino con set
 
-- busca dentro del objeto y no afuera sino lleva this. buscara afuea otro const
-  THIS
+#### Busca dentro del objeto y no afuera sino lleva this. buscara afuea otro const
+
+* THIS
 
 ```javascript
-const n ={
+const n = {
     nombre = rafael
 
 	mostrarinfo function (){
@@ -41,7 +42,7 @@ n.mostrarinfo();   // consola el nombre es rafael
 - this
 - object constructor
 
-````javascript
+
 function producto (nombre , precio){
      this.nombre = nombre;
 	this.precio=precio;
@@ -51,7 +52,8 @@ const producto2 = new producto ('monitor 24' , 5000);
 console.log(producto2);
 
 consola   nomre : monito 24 , precio: 5000
-```javascript
+
+
 /////////////////////////////////////////////////////
 
 console.log(objeto.keys(producto)); izquida muestra  " nombre :"
@@ -1493,22 +1495,24 @@ localStorage.setItem('meses', JSON.stringify(mesesArray))
 // elimina
 //localStorage.clear();
 
-//////////////////////////////////////////////////////
-			PROTOTYPE
 
-clases - modelo a seguir
-objeto = es una instancia de una clase cuando ya tiene nombre ese objeto
- atributos = es una caracteristica o propiedad del objeto (son variables dentro de un objeto)
- metodos = son las acciones que un objeto puede realizar .
+# PROTOTYPE
 
-objeto unico que hereda atributos para otras metodos ..
+**Clases** - Modelo a seguir
 
-Prototype = es como datos dentros de objetos para ser usado por metodos  con funciones .. por que con arrow no puede solo se usa local mente no globalmente
-		tambien se puede usar la herencia de datos para otros prototypes
+**Objeto**: Es una instancia de una clase cuando ya tiene nombre ese objeto.
 
-clases = es casi igual que prototype  solo que se diferencia en herencia para heredar  usan la palabra "extends classObjeto anterior"
+**atributos**: Es una caracteristica o propiedad del objeto (son variables dentro de un objeto)
 
-privado y publico = a la variable se pone un # para que sea privado por ejemplo : #nombre  solo se puede acceder por la clase
+**Metodos**: Son las acciones que un objeto puede realizar objeto unico que hereda atributos para otras metodos.
+
+**Prototype**: Son como datos dentro de objetos para ser usado por metodos  con funciones. Por que con arrow no puede, solo se usa local mente no globalmente.
+
+* Tambien se puede usar la herencia de datos para otros prototypes
+
+**Clases**: Es casi igual que prototype  solo que se diferencia en herencia para heredar  usan la palabra "extends classObjeto anterior"
+
+**Privado y Publico**: la variable se pone un # para que sea privado por ejemplo : #nombre  solo se puede acceder por la clase
 
 
 
@@ -1543,16 +1547,20 @@ console.log(mySet);// Set {1, "some text", Object {a: 1, b: 2}, Object {a: 1, b:
 
 - Un set te permite crear una lista de valores sin duplicados.
 
-Pocas veces los veo que se utilizan, muchas personas prefieren crear arreglos y evitar duplicados, pero sería más sencillo con un set... de hecho en algunas ocasiones termina siendo mejor opción que un arreglo o un objeto...
+Pocas veces los veo que se utilizan, muchas personas prefieren crear arreglos y evitar duplicados, pero sería más sencillo con un set... de hecho en algunas ocasiones termina siendo mejor opción que un arreglo o un objeto
 
 ```javascript
+
 let carrito = new Set();
+
 carrito.add("Camisa");
 carrito.add("Disco #1");
 carrito.add("Disco #2");
 carrito.add("Disco #3");
 carrito.add("Disco #3");
+
 console.log(carrito.size);
+
 ```
 
 - En un arreglo
