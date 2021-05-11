@@ -1,7 +1,7 @@
-﻿CTRL + SHIF + P = COLOR VISUAL VASIC.
+﻿
 
 
-<img align="right" alt="GIF" src="banner.png" height="200px" width="700px"  />
+<img src="banner.png" height="250px" width="900px"  />
 
 # Apuntes de JavaScript
 
