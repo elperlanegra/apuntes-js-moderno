@@ -1,0 +1,1 @@
+shift + alt + flecha abajo == para duplicar
