@@ -1508,13 +1508,43 @@ Prototype = es como datos dentros de objetos para ser usado por metodos  con fun
 clases = es casi igual que prototype  solo que se diferencia en herencia para heredar  usan la palabra "extends classObjeto anterior"
 
 privado y publico = a la variable se pone un # para que sea privado por ejemplo : #nombre  solo se puede acceder por la clase 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-//                                                          CREANDO SET
-// Un set te permite crear una lista de valores sin duplicados.
-// Pocas veces los veo que se utilizan, muchas personas prefieren crear arreglos y evitar duplicados, pero sería más sencillo con un set... de hecho en algunas ocasiones termina siendo mejor opción que un arreglo o un objeto...
 
+### **CREANDO UN SET** (EJEMPLO)
+```javascript
+const mySet = new Set();
+
+mySet.add(1);
+mySet.add(5);
+mySet.add('some text');
+
+const o = {a: 1, b: 2};
+mySet.add(o);
+
+mySet.add({a: 1, b: 2}); // La variable "o" referencia a otro objeto, por lo que agrega otro valor.
+
+mySet.has(1); // true
+mySet.has(3); // false, 3 no ha sido añadido al Set
+mySet.has(5);              // true
+mySet.has(Math.sqrt(25));  // true
+mySet.has('Some Text'.toLowerCase()); // true
+mySet.has(o); // true
+
+mySet.size; // 5
+
+mySet.delete(5); // Elimina 5 del Set
+mySet.has(5);    // false, 5 fue eliminado
+
+mySet.size; // 4, sólo removimos un valor
+console.log(mySet);// Set {1, "some text", Object {a: 1, b: 2}, Object {a: 1, b: 2}}
+```
+
+* Un set te permite crear una lista de valores sin duplicados.
+
+Pocas veces los veo que se utilizan, muchas personas prefieren crear arreglos y evitar duplicados, pero sería más sencillo con un set... de hecho en algunas ocasiones termina siendo mejor opción que un arreglo o un objeto...
+
+```javascript
 let carrito = new Set();
 carrito.add('Camisa');
 carrito.add('Disco #1');
@@ -1522,20 +1552,23 @@ carrito.add('Disco #2');
 carrito.add('Disco #3');
 carrito.add('Disco #3');
 console.log(carrito.size);
+```
 
-
-// En un arreglo
+* En un arreglo
+```javascript
 let numeros = new Set([1,2,3,4,5,6,7,3,3,3,3]);
 console.log(numeros.size);
+```
 
 
+```javascript
 let carrito = new Set();
 carrito.add('Camisa');
 carrito.add('Disco #1');
 carrito.add('Disco #2');
 carrito.add('Disco #3');
 carrito.add('Disco #3');
-
+```
 
 * Comprobando que un valor existe en el set.
 ```javascript
