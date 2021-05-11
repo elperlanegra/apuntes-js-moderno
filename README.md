@@ -1308,12 +1308,13 @@ function validarFormulario(e){// siempre va (e) ya que arriva lo llama
 
 
 })
-///////////////////////////////////////////////////////////////////////////////////////////////((////////////////////////////
-					SCROLL
-/// En este video estaremos viendo eventos que suceden con el scroll del sitio web...
 
-// Es muy común que muchos sitios agreguen funcionalidad de que al dar scroll y llegar a ver un elemento este tenga alguna animación, eso se hace con eventos en el mouse..
+# SCROLL
+* En este video estaremos viendo eventos que suceden con el scroll del sitio web...
 
+* Es muy común que muchos sitios agreguen funcionalidad de que al dar scroll y llegar a ver un elemento este tenga alguna animación, eso se hace con eventos en el mouse..
+
+```javascript
 window.addEventListener('scroll', () => {
     // console.log('scrolling...');
 
@@ -1339,17 +1340,20 @@ window.addEventListener('scroll', () => {
 
 
 })
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+```
 
-			STOP DE CLICK  EVENT BUBLING prevenir 1 click dado en 3 enlaces y q se uno en cada uno
 
-// Veamos lo que se conoce como Event Bubbling...
+# STOP DE CLICK  EVENT BUBLING 
+prevenir 1 click dado en 3 enlaces y q sea uno en cada uno
 
-// Event Bubling es cuando presionas en un evento, pero ese evento se propaga por muchos otros dando resultados inesperados
+* Veamos lo que se conoce como Event Bubbling...
 
- // tenemos diferentes cards, con información...
-//  vamos a crear 3 selectores
+Event Bubling es cuando presionas en un evento, pero ese evento se propaga por muchos otros dando resultados inesperados
 
+Tenemos diferentes cards, con información...
+vamos a crear 3 selectores
+
+```javascript
 const cardDiv = document.querySelector('.card');
 const infoDiv = document.querySelector('.info');
 const titulo = document.querySelector('.titulo');
@@ -1368,12 +1372,14 @@ titulo.addEventListener('click', e => {
     e.stopPropagation();
     console.log('click titulo');
 })
+```
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-			DELEGATION
-		nos dirigimos a la direcion q damos click
-// Otra opción que a mi me gusta mucho es aplicar algo llamado delegation..
 
+# DELEGATION
+Nos dirigimos a la direcion q damos click
+Otra opción que a mi me gusta mucho es aplicar algo llamado delegation..
+
+```javascript
 const cardDiv = document.querySelector('.card');
 
 cardDiv.addEventListener('click', e => {  evento click
@@ -1384,81 +1390,122 @@ cardDiv.addEventListener('click', e => {  evento click
         console.log('click info');
     }
 });
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
- 		OTRA FORMA PARA EVITAR LA PROPAGACION
-// Evitar la propagación con contenido creado...
+```
 
 
+# OTRA FORMA PARA EVITAR LA PROPAGACION
+
+* Evitar la propagación con contenido creado...
+
+```javascript
 const parrafo1 = document.createElement('P');
 parrafo1.textContent = 'Concierto';
 parrafo1.classList.add('categoria');
 parrafo1.classList.add('concierto');
+```
 
-// Segundo parrafo
+
+* Segundo parrafo
+```javascript
 const parrafo2 = document.createElement('P');
 parrafo2.textContent = 'Concierto de Rock';
 parrafo2.classList.add('titulo');
+```
 
-// 3er parrafo...
+
+* Tercer parrafo...
+```javascript
 const parrafo3 = document.createElement('p');
 parrafo3.textContent = '$800 por persona';
 parrafo3.classList.add('precio');
 
 parrafo3.onclick = nuevaFuncion(1);   // nuevo click para dar una funcion
+```
 
-// crear el div...
+
+* crear el div
+```javascript
 const info = document.createElement('div');
 info.classList.add('info');
 info.appendChild(parrafo1)
 info.appendChild(parrafo2)
 info.appendChild(parrafo3);
+```
 
 
-// Vamos a crear la imagen
+* Vamos a crear la imagen
+```javascript
 const imagen = document.createElement('img');
 imagen.src = 'img/hacer2.jpg';
+```
 
-// Crear el Card..
+
+* Crear el Card..
+```javascript
 const contenedorCard = document.createElement('div');
 contenedorCard.classList.add('contenedorCard');
+```
 
-// Vamos a asignar la imagen al card...
+
+* Vamos a asignar la imagen al card...
+```javascript
 contenedorCard.appendChild(imagen);
+```
 
-// y el info
+
+* y el info
+```javascript
 contenedorCard.appendChild(info);
+```
 
-// Insertarlo en el HTML...
+
+*  Insertarlo en el HTML...
+```javascript
 const contenedor = document.querySelector('.hacer .contenedor-cards');
 contenedor.appendChild(contenedorCard); // al inicio info
+```
 
 
 
+
+```javascript
 function nuevaFuncion(id) {     // CUANDO A SIDO DADO UN CLICK mostrar id
     console.log('click..', id)
 }
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-			LOCALSTORAGE AGREGAR
-// añadir algo a sessionstorage
+```
+
+
+# LOCALSTORAGE AGREGAR
+*  añadir algo a sessionstorage
+```javascript
 sessionStorage.setItem('nombre', 'Pablo');
+```
 
-// Local Storage solo soporta strings, no soporta arrays ni objetos pero puedes almacenarlos convirtiendolos a string..
+* Local Storage solo soporta strings, no soporta arrays ni objetos pero puedes almacenarlos convirtiendolos a string..
 
+```javascript
 const producto = {
     nombre: 'Monitor 24"',
     precio: 300
 }
- // combertimos un objeto en string agregando al localstorage
+```
+
+* combertimos un objeto en string agregando al localstorage
+
+```javascript
 const productoString = JSON.stringify(producto);
 localStorage.setItem('productoJSON', productoString);
+```
 
 
 
-// Lo mismo con un array a string
+
+* Lo mismo con un array a string
+```javascript
  const meses = ['Enero', 'Febrero', 'Marzo'];
 localStorage.setItem('meses',  JSON.stringify(meses));
-//////////////////////////////////////////////////////
+```
+
 
 
 # LOCALSTORAGE OBTENER DATOS
