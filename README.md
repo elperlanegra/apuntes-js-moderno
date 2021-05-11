@@ -1,6 +1,8 @@
 ﻿CTRL + SHIF + P = COLOR VISUAL VASIC.
 
+![](banner.png)
 # Apuntes de JavaScript
+
 
 Una variable decladara en CONST ?se puede puede modicar sus valores
 en... objetos y arreglos ...
