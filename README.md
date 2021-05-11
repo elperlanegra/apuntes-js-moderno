@@ -1,47 +1,47 @@
 ﻿CTRL + SHIF + P = COLOR VISUAL VASIC.
 
-#  Apuntes de JavaScript
+# Apuntes de JavaScript
+
 Una variable decladara en CONST ?se puede puede modicar sus valores
 en... objetos y arreglos ...
 
-Un arreglo puede tener objetos ? si 
+Un arreglo puede tener objetos ? si
 
+diferencia en tre foreach y map ? es que map crea un nuevo arreglo
 
-diferencia en tre foreach y map ? es que map crea un nuevo arreglo 
-
-
-
-diferencia de freeze y seal  es q el seal se puede modificar pero no eliminar
+diferencia de freeze y seal es q el seal se puede modificar pero no eliminar
 
 freeze no se puede hacer nada ni eliminar ni modificar
 
- funcion declaradas y funcion Expresion diferencia es q la expresion la la lee si declaras antes de la funcion
-encambio la declarada lee si esta primera la declaracion o al ultimo 
+funcion declaradas y funcion Expresion diferencia es q la expresion la la lee si declaras antes de la funcion
+encambio la declarada lee si esta primera la declaracion o al ultimo
 
+#### ¿Que diferencia hay entre function y arrow function ?
 
-que diferencia hay entre function y arrow function
-es que el arrow busca globalmente y fuction dentro de la function
+- El arrow busca globalmente y fuction dentro de la function
 
-como eliminas un duplicado de una raid ?
-elimino con set 
+#### ¿ Como eliminas un duplicado de una raid ?
 
+Elimino con set
 
+- busca dentro del objeto y no afuera sino lleva this. buscara afuea otro const
+  THIS
 
-////////////////////////////////////////////////////////////////
-// busca dentro del objeto y no afuera sino lleva this. buscara afuea otro const 
-THIS///
+```javascript
 const n ={
-      nombre = rafael
+    nombre = rafael
 
 	mostrarinfo function (){
 		console.log('el nombre es ${this.nombre}')
 
 }
 n.mostrarinfo();   // consola el nombre es rafael
- 
+```
 
-///////////////////////////////////////////////////
-// this // object constructor
+- this
+- object constructor
+
+````javascript
 function producto (nombre , precio){
      this.nombre = nombre;
 	this.precio=precio;
@@ -51,6 +51,7 @@ const producto2 = new producto ('monitor 24' , 5000);
 console.log(producto2);
 
 consola   nomre : monito 24 , precio: 5000
+```javascript
 /////////////////////////////////////////////////////
 
 console.log(objeto.keys(producto)); izquida muestra  " nombre :"
@@ -59,7 +60,7 @@ console.log(objeto.entries(producto)); muestra en par nombre: rafael
 ///////////////////////////////////////////////////
 const meses = [junio,julio]
 meses.push('octubre');// agrega
-console.table(meses); 
+console.table(meses);
 console.log(meses.length);
 
 for (let i= o ;  i<meses.length; i++){
@@ -77,10 +78,10 @@ aprendiendo ();
 ............................................
 const aprendiendo2= ()=>'aprendiendo java';
 }
-console.log (aprendiendo2 ());              // aprendiendo java 
+console.log (aprendiendo2 ());              // aprendiendo java
 ............................................
 const datos= (nombre)=>'el se llama ${nombre}';
-//2- aqui inserta a (nombre= rafael) 3- luego lo lleva a aqui${rafael} 
+//2- aqui inserta a (nombre= rafael) 3- luego lo lleva a aqui${rafael}
 
 console.log (datos(rafael)); // 1- pone el nombre    // El se llama rafael
 .............................................
@@ -119,26 +120,26 @@ const nuevoArray2 = carrito.forEach( function(producto) {
 /////////////////////////////////////////////////////////////////////////
 === = si o si es igual
 == = puede ser igual pero no tan igual
-!== = menos o diferente a tal 
+!== = menos o diferente a tal
 > = mayor a meno
 < = menor a mayor
-if =  es --> ? 
-else = es -->; 
+if =  es --> ?
+else = es -->;
 let = 0 ;   // += va sumando y lo almacena en el LED
-reduce = + , 0 hace q se sume pero con inicializador numero q yo quiera q inicie pongamosle 2000 y 
+reduce = + , 0 hace q se sume pero con inicializador numero q yo quiera q inicie pongamosle 2000 y
 		 no va usar led  como usa arriva con LED = 0 no usara
 		definira como un carrito.reduce(total.producto) total + producto.precio,0
 break = detiene todo
-continue = sigue 
-function = ()=> 
-this.  = va dentro de de su raid o objetos busca dentro no afuera 
-for = recorre y tiene su funcion 
+continue = sigue
+function = ()=>
+this.  = va dentro de de su raid o objetos busca dentro no afuera
+for = recorre y tiene su funcion
 while = si no cumple la funcion no recorre
-do while = recorre una vez y luego sino cumple la funcion no recorre 
-foreach = no crea una nueva raid 
+do while = recorre una vez y luego sino cumple la funcion no recorre
+foreach = no crea una nueva raid
 map = crea una nueva raid
 for of = interactua con raid y busca elementos no indices
-for in = busca indices dentro de un objeto y en arraid indices // pero no vuelve  nada si no encuentra 
+for in = busca indices dentro de un objeto y en arraid indices // pero no vuelve  nada si no encuentra
 
 Every = es raro, ya que TODOS los elementos del arreglo deberán cumplir esa condición.. // false // version del &&
 some = busca 1 vedadero y falso si estan o no dentro de objetos 1 debecumplir la condicion  // true  // version del || ord
@@ -150,24 +151,24 @@ filter = trae todo y crea una nueva raid con su nueva conducion d operadores
 find  = llama una sola vez cuando se cumple la condicion y si hay mas de 2 solo trae el primero
 
 concat. = une arrays
-rest operator o spread operator "..." = ...meses1,...meses2,mes,'otromes' y une las array pero tienes q poner ordenadamente 
+rest operator o spread operator "..." = ...meses1,...meses2,mes,'otromes' y une las array pero tienes q poner ordenadamente
 								'otromes' se agrega haci y si lepones ... armara nuevas array con cada letra// no hacer
-para meter un nuevo producto o "mes12"  se pone sin comillas y sin ... puntitos... 
+para meter un nuevo producto o "mes12"  se pone sin comillas y sin ... puntitos...
 se crea una nueva constante y como objeto para meterlo adentro de la ray mes
 
 dom = elementos de tu pagina html que te permite seleccionarlos y modificarlos  para mostrar por pantalla tu pagina web
 const heading = document.querySelector('h1');// asi nos crearemos la clase y nos dirigiremos como queremos
 getElementsByClassName = busca clases retorna 1 y el primero que encuentre
-getElementById = busca ID y retorna 1 y el primero que encuentre 
+getElementById = busca ID y retorna 1 y el primero que encuentre
 querySelector = busca ID Y CLASES y retorna el primero que encuentre y usa sentencia de CSS para encontrarlos ID se seleciona """"#"""""
 querySelectorAll  = busca id y clases y retorna TODOS auque traer VARIAS ID sea malas practicas  ID se seleciona """"#"""""
 
 imagen.src = 'img/hacer2.jpg'; = para cambiar imagenes
-console.log(encabezado.innerText);  // = si le ponemos a ese elemento visibility: hidden; en el CSS, 
+console.log(encabezado.innerText);  // = si le ponemos a ese elemento visibility: hidden; en el CSS,
 console.log(encabezado.textContent); // = entra al texto y modifica
 console.log(encabezado.innerHTML); // = se trae el html
 
-console.log(heading.style);//= cambiar el color 
+console.log(heading.style);//= cambiar el color
 // heading.style.backgroundColor = 'red'; //  Nota como las propiedades que le puedes pasar, son similares a las de CSS, con la diferencia de que el guion se elimina y la segunda palabra su primer letra es mayuscula.
 // heading.style.textTransform = 'uppercase';
 // heading.style.fontFamily = 'Arial';
@@ -202,7 +203,7 @@ console.log(enlace.parentElement.parentElement)//= También puedes ir al padre d
 console.log(enlace.nextElementSibling); //= siguiente si esta en el mismo nivel esto se llama TRAVERSING
 console.log(enlace.nextElementSibling.nextElementSibling); //= pasara 2 veces el siguiente
 
-onsole.log(ultimoCard.previousElementSibling);//= También hay una forma de ir digamos en la otra dirección... VAMOS A la posicion 4 y esto nos dirigira al 3 
+onsole.log(ultimoCard.previousElementSibling);//= También hay una forma de ir digamos en la otra dirección... VAMOS A la posicion 4 y esto nos dirigira al 3
 ----------------------------------
 
 primerEnlace.remove(); = REMUEVE el enlace selecionado
@@ -217,15 +218,15 @@ navegacion.appendChild(enlace); // APPENDCHILD"" = es como crear nuevo hijo a NA
 navegacion.insertBefore(enlace, navegacion.children[1]); // INSERTBEFORE = colocar dentro del NAVEGACION la posicion que quiero poner mi nuevo ENLACEs
 
 CREATEELEMENT
-const enlace = document.createElement('A'); // si vamos a crear una etiqueta o generando archivos cosas d HTML 
+const enlace = document.createElement('A'); // si vamos a crear una etiqueta o generando archivos cosas d HTML
 
 enlace.href = '/nuevo-enlace'; // añadiendo HREF
 enlace.target = '_blank' //_blank : Carga la URL en un nuevo contexto de navegación
 enlace.classList.add('enlace'); // agregando nueva clase
 enlace.setAttribute('data-enlace', 'nuevo-enlace') //  atributos de html
-enlace.onclick = miFuncion; // crear una funcion al dar click 
-const navegacion = document.querySelector('.navegacion'); 
-// console.log(navegacion.children); // vemos la posiciones 
+enlace.onclick = miFuncion; // crear una funcion al dar click
+const navegacion = document.querySelector('.navegacion');
+// console.log(navegacion.children); // vemos la posiciones
 //navegacion.appendChild(enlace); // APPENDCHILD es como crear nuevo hijo a NAVEGACION del menu por ejemplo y su nuevo hijo sera enlace
 navegacion.insertBefore(enlace, navegacion.children[1]); // colocar dentro del NAVEGACION la posicion que quiero poner mi nuevo ENLACEs
 /*function miFuntion(){
@@ -244,16 +245,16 @@ DOMContentLoaded' = espera q todo cargue y luego muestra ..
 
 
 TECLADO
-// keydown  - cuando presionas una tecla 
+// keydown  - cuando presionas una tecla
 // keyup - Cuando sueltas la tecla...
 // blur - cuando sales del input - ideal para validación...
 // También hay eventos para cortar copiar y pegar
 
 // cut    cuando cortan
 // copy
-// paste cuando pegas algo 
+// paste cuando pegas algo
 // input - cuando se ejecutan todas las que aquí se muestran... incluyendo cortar, pegar y copiar menos el blur
-// e = a  o leer evento 
+// e = a  o leer evento
 
 
 MAUSE
@@ -261,7 +262,7 @@ MAUSE
 // click - similar, de hecho es probablemente el más utilizado..
 // dbclick - doble click como cuando quieres abrir un archivo
 // mouseup - al soltar
-// mauseenter - cuando pasas sobre el 
+// mauseenter - cuando pasas sobre el
 // mauseout -cuando sales sobre el
 
 
@@ -278,12 +279,12 @@ E.PREVENTDEFAULT()
     // Crear consultas Ajax entre otras cosas o api antes de ir al enlace predestinado
 
 
-e.target.method =  saber que metodo usa si usa POST 
+e.target.method =  saber que metodo usa si usa POST
 e.target.action   = que accion hace o dnde dirije ese enlace
 
 
 SCROLL
-window.scrollY = cuantos pixeles hay de arriba y ir bajando 
+window.scrollY = cuantos pixeles hay de arriba y ir bajando
 
 GETBOUNDINGCLIENTERECT
 .getBoundingClientRect(); // Este método te da el tamaño de un elemento y su ubicación respecto a la ubicación actual..en movimiento de html de arriba para abajo
@@ -295,8 +296,8 @@ GETBOUNDINGCLIENTERECT
 
 ONCLICK funcion
 parrafo3.onclick = nuevaFuncion(1);   // nuevo click para dar una funcion
- 
-function nuevaFuncion(id) {     // CUANDO A SIDO DADO UN CLICK mostrar id 
+
+function nuevaFuncion(id) {     // CUANDO A SIDO DADO UN CLICK mostrar id
     console.log('click..', id)
 
 
@@ -304,10 +305,10 @@ LOCAL STORAGE
  Local Storage solo soporta strings, no soporta arrays ni objetos pero puedes almacenarlos convirtiendolos a string..
 
 
-PROTOTYPE 
-Prototype = es como datos dentros de objetos para ser usado por metodos  con funciones .. por que con arrow no puede solo se usa local mente no globalmente 
-		
-herencia= de datos para otros prototypes usando create 
+PROTOTYPE
+Prototype = es como datos dentros de objetos para ser usado por metodos  con funciones .. por que con arrow no puede solo se usa local mente no globalmente
+
+herencia= de datos para otros prototypes usando create
 
 CLASES
 clases = es casi igual que prototype  solo que se diferencia en herencia para heredar  usan la palabra "extends classObjeto anterior"
@@ -315,7 +316,7 @@ clases = es casi igual que prototype  solo que se diferencia en herencia para he
 class Empresa extedes Cliente {
 }
 
-en herencia= usa SUPER() para ir al constructor   padre. 
+en herencia= usa SUPER() para ir al constructor   padre.
 
 
 
@@ -342,7 +343,7 @@ en un for loop como indetificas los pares y impares?
 
 
 SCROLL
-window.scrollY = cuantos pixeles hay de arriba y ir bajando 
+window.scrollY = cuantos pixeles hay de arriba y ir bajando
 
 
 
@@ -350,7 +351,7 @@ window.scrollY = cuantos pixeles hay de arriba y ir bajando
 
 /////////////////////////////////////////////
 como detener la array en el numero 5  si t doy 10 numeros ?  // y como muestro a numero 5 en letras
- 
+
 for (let i = 0  ; i <= 20 ; i++){
 	si (i===5){
 	mostrar ('este es el 5');  //mostrar ('este es el CINCO');
@@ -375,13 +376,13 @@ for(let i = 0; i <= 10; i++) {
         console.log(`El articulo ${carrito[i].nombre} Tiene descuento... `);
         continue;
     }
-    console.log(carrito[i].nombre); // llama el resultado q no tienen descuento 
-   
+    console.log(carrito[i].nombre); // llama el resultado q no tienen descuento
+
 }
 
 /////////////////////////////////////////////////////////////////////////////////
 / Fizz Buzz...
- mostrar numero del 0 al 100 
+ mostrar numero del 0 al 100
 // 3 6 9 12 15 ...  FIZZ
 // 5 10 15 20 25 ... BUZZ
 // 15 30 45 ... Fizz Buzz
@@ -393,7 +394,7 @@ for(let i = 1; i < 100; i++  ) {
         console.log(`${i} fizz`);
     } else if ( i % 5 === 0 ) {
         console.log(`${i} buzz`)
-    } 
+    }
 }
 ////////////////////////////////////////////////////////////////////////////////////
 
@@ -404,7 +405,7 @@ while (i < 10) { // condicion como no es menor el let es 100 entoces no seguira 
 
     // Bloque de código...
     console.log(`Numero: ${i}`);
-    
+
 
 
     i++; // incremento
@@ -488,10 +489,10 @@ let automovil = {
     marca: 'Chevrolet'
 }
 for(let auto in automovil) {
-    console.log(`${auto} : ${automovil[auto]}`); 
+    console.log(`${auto} : ${automovil[auto]}`);
 }
-// aqui vemos q los indice son modelo , motor, anio,marca,  
-IN va por el indice en un ARRAY iria por 1 . 2. 3 // tambien llamados como OBJETOS q son estos 
+// aqui vemos q los indice son modelo , motor, anio,marca,
+IN va por el indice en un ARRAY iria por 1 . 2. 3 // tambien llamados como OBJETOS q son estos
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 """""""""some"""""""""""""""""""""
@@ -510,20 +511,20 @@ const carrito = [
 // En el caso de un arreglo de objetos... .includes no es la mejor opción, podrías utilizar uno llamado .some
 // forma nueva  para OBJETOS
 
-const existe = carrito.some( producto => producto.nombre === 'Celular' ); 
+const existe = carrito.some( producto => producto.nombre === 'Celular' );
 console.log(existe);
 
-///////////////////////////////// 
+/////////////////////////////////
 includes""""""""""""""""""""
-forma nueva 
+forma nueva
 // O también podrías utilizar el Array Method de .includes
 // Cambiar a Diciembre... confirma dentro de una array solo include funciona bien para array
 
-const resultado = meses.includes('Enero'); 
+const resultado = meses.includes('Enero');
 
 console.log(resultado);
 
-///////////////////////////////// forma vieja 
+///////////////////////////////// forma vieja
 meses.forEach(mes => {
     if(mes === 'Enero') {
         console.log('Enero si existe...')
@@ -535,7 +536,7 @@ meses.forEach(mes => {
  te dirá el indice es decir la ubicación del elemento en el arreglo...
 // Cambiar a Diciembre, Tendremos ""-1"" eso quiere decir que no lo encontró
 
-const indice = meses.findIndex( mes => mes === 'Abril' ); 
+const indice = meses.findIndex( mes => mes === 'Abril' );
 console.log(indice);
 
 /////////////////////////////////////////////////////////
@@ -564,12 +565,12 @@ console.log(total);
 ////////////////////////////////////////////////////
 REDUCE""""""""
 // Puedes ver que si bien no se ve mal, podemos tenerlo todo en una sola linea con un .reduce
-                            
+
                             // total, actual seria como un cuando creamos producto bueno este seria un deposito de numeros eso es el reduce
 let resultado = carrito.reduce((total, producto) => total + producto.precio, 0); //0 es el inicio si pongo 2000 iniciara la suma despues de los 2000
 console.log( resultado );
 
-hace q se sume pero con inicializador numero q yo quiera q inicie pongamosle 2000 y 
+hace q se sume pero con inicializador numero q yo quiera q inicie pongamosle 2000 y
 		 no va usar led  como usa arriva con LED = 0 no usara
 		sino q crea su propio actual deposito de numeros
 /////////////////////////////////////////////////////////////
@@ -578,7 +579,7 @@ filter trae todo y crea una nueva raid con su nueva conducion d operadores
 let resulta;
 let resultado = carrito.filter( producto => producto.precio > 400 ); // Todos los mayores a 400 - añadir  && producto.precio < 600
 let resultado2 = carrito.filter( producto => producto.nombre === 'Celular'  ); // Traerte el celular
-let resultado3 = carrito.filter(producto => producto.nombre !== 'Laptop'); // Todos menos la laptop	
+let resultado3 = carrito.filter(producto => producto.nombre !== 'Laptop'); // Todos menos la laptop
 console.log(resultado);
 console.log(resultado2);
 console.log(resultado3);
@@ -673,8 +674,8 @@ console.log(meses2); // Recuerda esto no modifica el arreglo original como si ha
 
 
 
-// O al inicio... en lugar de utilizar unshift, 
-const meses3 = ['Julio',...meses ]; 
+// O al inicio... en lugar de utilizar unshift,
+const meses3 = ['Julio',...meses ];
 
 
 // O tal vez quieres añadir un objeto a un arreglo de objetos al final
@@ -689,7 +690,7 @@ console.log(carrito3);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-DOM 
+DOM
 // 01- Vamos a abrir el capitulo 13-DOM y abrirlo en Live server
 
 // Lo primero que haremos sera crear una carpeta llamada js / y en ella colocar el archivo scripts.js
@@ -698,22 +699,22 @@ let elemento;
 
 elemento = document; // selecciona todo documento del html
 elemento = document.all; // seleciona todas las etiquetas que estamos utulizando en el html div h1 <a> todas
-elemento = document.all[0]; // 
+elemento = document.all[0]; //
 elemento = document.head; // todo lo que sea Head y sus hojas de estilo
 elemento = document.body; // todo lo que sea dentro de la etiqueta boddy
 elemento = document.domain; // dominio q localhost estas
-elemento = document.URL; // 
+elemento = document.URL; //
 elemento = document.characterSet;
 elemento = document.contentType;
 elemento = document.forms;//  formularios como los de buscar es como un arreglo de acceso
 elemento = document.forms[0];// entramos a la selecion
-elemento = document.forms[0].id; // selecionamos el id del formulario 
+elemento = document.forms[0].id; // selecionamos el id del formulario
 elemento = document.forms[0].method;// selecionamos los metodos POST GET
 elemento = document.forms[0].action; // selecionamos a la accion
 
 
 elemento = document.links; // selecciona todos los enlaces o registrados  html coleccion
-elemento = document.links[4].id;// seleccionamos el el HTML  
+elemento = document.links[4].id;// seleccionamos el el HTML
 elemento = document.links[4].classList;// clases de ese html como fuese un INDICE
 elemento = document.links[4].className;//  te selecciona como fuese un string
 
@@ -722,8 +723,8 @@ elemento = document.forms[4].classList[0];
 
 elemento = document.images; // seleciona las imagenes todas
 
-elemento = document.scripts; // selecciona todas las scripst 
-elemento = document.scripts[2].getAttribute('src'); 
+elemento = document.scripts; // selecciona todas las scripst
+elemento = document.scripts[2].getAttribute('src');
 
 console.log(elemento);
 
@@ -736,7 +737,7 @@ console.log(elemento);
 
                 // Todos tus selectores inician con document...
                 // Es muy importante las mayusculas y minusculas...
-const header = document.getElementsByClassName('header'); // nos permite selecionar los que tenga un nombre y una clase y escribirlo como lo tenemos en el html 
+const header = document.getElementsByClassName('header'); // nos permite selecionar los que tenga un nombre y una clase y escribirlo como lo tenemos en el html
 console.log(header);
 
 const hero = document.getElementsByClassName('contenido-hero');
@@ -754,14 +755,14 @@ console.log(noExiste);
 
 
 ///////////////////////////////////////////////////////////////////
-			
+
 
 
 	getElementById *********************************solo ID
 
 // En este video estaremos viendo como seleccionar un elemento por su ID, recuerda los ID's solo se deben utilizar uno con ese mismo nombre por documento...
 
-const formulario = document.getElementById('formulario') ////;Añadir un ID 2 veces, seleccionara el primero que encuentre... si hay 2 id iguales 
+const formulario = document.getElementById('formulario') ////;Añadir un ID 2 veces, seleccionara el primero que encuentre... si hay 2 id iguales
 console.log(formulario);
 
 
@@ -798,10 +799,10 @@ console.log(formulario);
 
 
 // En CSS seleccionas los ID con un signo de numeral..
-const formulario = document.querySelector('.contenido-hero #formulario'); 
+const formulario = document.querySelector('.contenido-hero #formulario');
 console.log(formulario);
 
-// Si un selector no existe, 
+// Si un selector no existe,
 const noExiste = document.querySelector('#no-existe');
 console.log(noExiste);
 
@@ -820,18 +821,18 @@ console.log(nav);
 // En nuestro HTML hay muchos cards, cuando utilizamos querySelector vimos que retornaba unicamente el primero..
 
 
-const cards = document.querySelectorAll('.card'); 
+const cards = document.querySelectorAll('.card');
 console.log(cards);
 
 // si recuerdas tenemos dos elementos con el id de formulario
 
-const formularios = document.querySelectorAll('#formulario'); 
+const formularios = document.querySelectorAll('#formulario');
 console.log(formularios); // Puedes ver quue eso si funciona, sin embargo recuerda que no rescomendable tener el mismo ID más de una vez por docuemnto...
 
 
 // Si no hay elementos no va a retornar nada
 
-// Si un selector no existe, 
+// Si un selector no existe,
 const noExiste = document.querySelectorAll('#no-existe');
 console.log(noExiste);
 
@@ -842,7 +843,7 @@ const encabezado = document.querySelector('.contenido-hero h1');
 // console.log(encabezado);
 
 // Si deseas acceder al texto hay 3 formas de hacerlo...
-console.log(encabezado.innerText);  // si le ponemos a ese elemento visibility: hidden; en el CSS, 
+console.log(encabezado.innerText);  // si le ponemos a ese elemento visibility: hidden; en el CSS,
 console.log(encabezado.textContent); // entra al texto y modifica
 console.log(encabezado.innerHTML); // se trae el html
 
@@ -888,7 +889,7 @@ console.log(heading.style);
 
 // Ahora yo no recomiendo que pongas style, ya que tu archivo JS será muy grande, otra desventaja es que la apariencia debe ser algo que sea responsabilidad del CSS, pero lo que si puedes hacer es agregar o quitar classes..
 
-// Vamos a seleccionar el primer card, puedes ver que tiene un parrafo con una categoria llamada concierto, eso le cambia el color: 
+// Vamos a seleccionar el primer card, puedes ver que tiene un parrafo con una categoria llamada concierto, eso le cambia el color:
 const card = document.querySelector('.card');
 console.log(card);
 console.log(card.classList); // Classlist nos permitirá listar las classes
@@ -1017,7 +1018,7 @@ console.log(card.nextElementSibling);
 const ultimoCard = document.querySelector('.card:nth-child(4)');
 console.log(ultimoCard)
 
-console.log(ultimoCard.previousElementSibling);// También hay una forma de ir digamos en la otra dirección... VAMOS A la posicion 4 y esto nos dirigira al 3 
+console.log(ultimoCard.previousElementSibling);// También hay una forma de ir digamos en la otra dirección... VAMOS A la posicion 4 y esto nos dirigira al 3
 
 
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -1056,13 +1057,13 @@ navegacion.removeChild(borrar);
 
 // Vamos a crear un nuevo enlace... lo primero que hay que hacer es crear el elemento HTML, en este caso un enlace...
 
-const enlace = document.createElement('A'); // si vamos a crear una etiqueta o generando archivos cosas d HTML 
+const enlace = document.createElement('A'); // si vamos a crear una etiqueta o generando archivos cosas d HTML
 
 // Segundo paso es crear el texto del enlace no? lo haremos con textContent
 
-enlace.textContent = 'Nuevo Enlace'; // agrega un texto  a la etiqueta 
+enlace.textContent = 'Nuevo Enlace'; // agrega un texto  a la etiqueta
 
-// Despues vamos a asignar una ruta 
+// Despues vamos a asignar una ruta
 enlace.href = '/nuevo-enlace'; // añadiendo HREF
 // Finalmente se agrega el enlace donde deseas mostrarlo...
 enlace.target = '_blank' //_blank : Carga la URL en un nuevo contexto de navegación
@@ -1071,11 +1072,11 @@ enlace.classList.add('enlace'); // agregando nueva clase
 
 enlace.setAttribute('data-enlace', 'nuevo-enlace') //  atributos de html
 
-enlace.onclick = miFuncion; // crear una funcion al dar click 
+enlace.onclick = miFuncion; // crear una funcion al dar click
 
 
-const navegacion = document.querySelector('.navegacion'); 
-// console.log(navegacion.children); // vemos la posiciones 
+const navegacion = document.querySelector('.navegacion');
+// console.log(navegacion.children); // vemos la posiciones
 //navegacion.appendChild(enlace); // APPENDCHILD es como crear nuevo hijo a NAVEGACION del menu por ejemplo y su nuevo hijo sera enlace
 navegacion.insertBefore(enlace, navegacion.children[1]); // colocar dentro del NAVEGACION la posicion que quiero poner mi nuevo ENLACEs
 
@@ -1091,10 +1092,10 @@ console.log(enlace);
 
 // crear los 3 parrafos.
 
-const parrafo1 = document.createElement('P'); // crea los parrafos 
+const parrafo1 = document.createElement('P'); // crea los parrafos
 parrafo1.textContent = 'Concierto';   // inserta texto
 parrafo1.classList.add('categoria'); // fon-size tamaño
-parrafo1.classList.add('concierto'); // color 
+parrafo1.classList.add('concierto'); // color
 
 // Segundo parrafo
 const parrafo2 = document.createElement('P');
@@ -1103,7 +1104,7 @@ parrafo2.classList.add('titulo'); // titulo clase dada por css y html  letras gr
 
 // 3er parrafo...
 const parrafo3 = document.createElement('p');
-parrafo3.textContent = '$800 por pesrona'; // precio 
+parrafo3.textContent = '$800 por pesrona'; // precio
 parrafo3.classList.add('precio'); // sub titulo de css
 
 // crear el div...
@@ -1133,7 +1134,7 @@ card.appendChild(info);// agregamos info al card
 // Insertarlo en el HTML...
 const contenedor = document.querySelector('.hacer .contenedor-cards');
 contenedor.appendChild(card); // al inicio info
-// contenedor.insertBeforse(card , contenedor.children[0] ) // elegimos la posicion que queremos poner 
+// contenedor.insertBeforse(card , contenedor.children[0] ) // elegimos la posicion que queremos poner
 
 
 console.log(parrafo1);
@@ -1141,11 +1142,11 @@ console.log(parrafo2);
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 			MOSTRAR Y OCULAR BOTON CON CLASES CSS ACTIVO A DESATIVO *****************************DOM
-// No siempre estarás haciendo traversing a tu dom, 
+// No siempre estarás haciendo traversing a tu dom,
 
-const btnFlotante = document.querySelector('.btn-flotante'); // llamamos al boton 
+const btnFlotante = document.querySelector('.btn-flotante'); // llamamos al boton
 
-const footer = document.querySelector('.footer'); // llamamos es lo que sale para arriva 
+const footer = document.querySelector('.footer'); // llamamos es lo que sale para arriva
 
 btnFlotante.addEventListener('click', mostrarOcultarFooter); // cuando de click hacer funcion o evento
 
@@ -1153,12 +1154,12 @@ function mostrarOcultarFooter() {
     if( footer.classList.contains('activo') ) { // Constaind busca si es que esta activo SINO ELSE AGREGA el ACTIVO y cuando vuelva a recorrer ya esta activo aqui y muestra recien el cuadro
         footer.classList.remove('activo'); // // remueve el activo
         this.classList.remove('activo'); // // remueve activo del boton y color
- 	this.textContent = 'Idioma y Moneda'; // cuando no esta activo  
+ 	this.textContent = 'Idioma y Moneda'; // cuando no esta activo
     } else {
-        footer.classList.add('activo'); // agrega ACTIVO 
-        this.classList.add('activo'); // agrega la clase de activo  y el color 
-        this.textContent = 'X Cerrar'; // cuando esta activo 
-    } 
+        footer.classList.add('activo'); // agrega ACTIVO
+        this.classList.add('activo'); // agrega la clase de activo  y el color
+        this.textContent = 'X Cerrar'; // cuando esta activo
+    }
 }
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1167,7 +1168,7 @@ AQUI muestra el 1,3,2    el DOMContentLoaded espera q todo cargue
 console.log(1)
     document.addEventListener('DOMContentLoaded', () => {
         console.log(2);
-    }) // Nota todos los eventos que hay disponibles 
+    }) // Nota todos los eventos que hay disponibles
 console.log(3);
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1183,7 +1184,7 @@ const nav = document.querySelector('.navegacion');
 nav.addEventListener('mouseenter', () => {
     console.log('entrando a navegacion')
 
-    nav.style.backgroundColor = 'white'; // color 
+    nav.style.backgroundColor = 'white'; // color
 });
 
 nav.addEventListener('mouseout', () => {
@@ -1199,7 +1200,7 @@ nav.addEventListener('mouseout', () => {
 // click - similar, de hecho es probablemente el más utilizado..
 // dbclick - doble click como cuando quieres abrir un archivo
 // mouseup - al soltar
-// mauseenter - cuando pasas sobre el 
+// mauseenter - cuando pasas sobre el
 // mauseout -cuando sales sobre el
 
 
@@ -1212,7 +1213,7 @@ nav.addEventListener('mouseout', () => {
 // En este video estaremos viendo eventos que suceden con el teclado, es decir cuando el usuario escribe en un input...
 
 
-// tenemos un formulario 
+// tenemos un formulario
 
 const busqueda = document.querySelector('.busqueda');
 
@@ -1221,16 +1222,16 @@ const busqueda = document.querySelector('.busqueda');
 // })
 
 
-// keydown  - cuando presionas una tecla 
+// keydown  - cuando presionas una tecla
 // keyup - Cuando sueltas la tecla...
 // blur - cuando sales del input - ideal para validación...
 // También hay eventos para cortar copiar y pegar
 
 // cut    cuando cortan
 // copy
-// paste cuando pegas algo 
+// paste cuando pegas algo
 // input - cuando se ejecutan todas las que aquí se muestran... incluyendo cortar, pegar y copiar menos el blur
-// e = a  o leer evento 
+// e = a  o leer evento
 
 // Ahora, no tiene mucha utilidad enviar a la consola un mensaje no? lo ideal seria saber el texto que se escribe o poderlo leer...
 
@@ -1263,7 +1264,7 @@ function leerInput(e) {
 
 // Cuando envias un formulario usualmente lo que este en el action, es la página que se abre...
 
-// 
+//
 
 const formulario = document.querySelector('.formulario');
 
@@ -1286,15 +1287,15 @@ formulario.addEventListener('submit', e => { // SUBMIT es como cuando alguien pr
 
     console.log(e.target.method)
     console.log(e.target.action)
-	
+
 
 const formulario = document.querySelector('#formulario');
 
 
 formulario.addEventListener('submit', validarFormulario){
 
-function validarFormulario(e){// siempre va (e) ya que arriva lo llama 
-    e.preventDefault(); 
+function validarFormulario(e){// siempre va (e) ya que arriva lo llama
+    e.preventDefault();
 
     console.log('enviando...');
     console.log(e);
@@ -1302,7 +1303,7 @@ function validarFormulario(e){// siempre va (e) ya que arriva lo llama
     console.log(e.target.method)
     console.log(e.target.action)
 })
-	
+
 
 })
 ///////////////////////////////////////////////////////////////////////////////////////////////((////////////////////////////
@@ -1319,7 +1320,7 @@ window.addEventListener('scroll', () => {
     // const pxScroll = window.scrollY;
     // console.log(pxScroll);
 
-    // window.scrollY = cuantos pixeles hay de arriba y ir bajando 
+    // window.scrollY = cuantos pixeles hay de arriba y ir bajando
 
     // Detectar un elemento al dar scroll...
 
@@ -1338,7 +1339,7 @@ window.addEventListener('scroll', () => {
 })
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-			STOP DE CLICK  EVENT BUBLING prevenir 1 click dado en 3 enlaces y q se uno en cada uno 
+			STOP DE CLICK  EVENT BUBLING prevenir 1 click dado en 3 enlaces y q se uno en cada uno
 
 // Veamos lo que se conoce como Event Bubbling...
 
@@ -1353,7 +1354,7 @@ const titulo = document.querySelector('.titulo');
 
 
 cardDiv.addEventListener('click', e => {
-    e.stopPropagation(); 
+    e.stopPropagation();
     console.log('click card');
 })
 infoDiv.addEventListener('click', e => {
@@ -1367,8 +1368,8 @@ titulo.addEventListener('click', e => {
 })
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-			DELEGATION 
-		nos dirigimos a la direcion q damos click 
+			DELEGATION
+		nos dirigimos a la direcion q damos click
 // Otra opción que a mi me gusta mucho es aplicar algo llamado delegation..
 
 const cardDiv = document.querySelector('.card');
@@ -1402,7 +1403,7 @@ const parrafo3 = document.createElement('p');
 parrafo3.textContent = '$800 por persona';
 parrafo3.classList.add('precio');
 
-parrafo3.onclick = nuevaFuncion(1);   // nuevo click para dar una funcion 
+parrafo3.onclick = nuevaFuncion(1);   // nuevo click para dar una funcion
 
 // crear el div...
 const info = document.createElement('div');
@@ -1432,7 +1433,7 @@ contenedor.appendChild(contenedorCard); // al inicio info
 
 
 
-function nuevaFuncion(id) {     // CUANDO A SIDO DADO UN CLICK mostrar id 
+function nuevaFuncion(id) {     // CUANDO A SIDO DADO UN CLICK mostrar id
     console.log('click..', id)
 }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1441,7 +1442,7 @@ function nuevaFuncion(id) {     // CUANDO A SIDO DADO UN CLICK mostrar id
 sessionStorage.setItem('nombre', 'Pablo');
 
 // Local Storage solo soporta strings, no soporta arrays ni objetos pero puedes almacenarlos convirtiendolos a string..
-  
+
 const producto = {
     nombre: 'Monitor 24"',
     precio: 300
@@ -1459,7 +1460,7 @@ localStorage.setItem('meses',  JSON.stringify(meses));
 			LOCALSTORAGE OBTENER DATOS
 
 // En este video veamos como obtener lo sdatos de Local storage
-// esto es para obtener el valor 
+// esto es para obtener el valor
 const nombre = localStorage.getItem('nombre');
 console.log(nombre);
 
@@ -1467,7 +1468,7 @@ console.log(nombre);
 const productoJSON = localStorage.getItem('productoJSON');
 console.log(JSON.parse( productoJSON ));
 
-// de STRING a ARREGLO 
+// de STRING a ARREGLO
 const meses = JSON.parse( localStorage.getItem('meses'));
 console.log(meses);
 
@@ -1483,7 +1484,7 @@ localStorage.removeItem('nombre');
 const mesesArray = JSON.parse(localStorage.getItem('meses'));
 console.log(mesesArray)
 
-// agrega 
+// agrega
 mesesArray.push('nuevo Mes');
 console.log(mesesArray);
 // actualiza el localstorage
@@ -1495,19 +1496,19 @@ localStorage.setItem('meses', JSON.stringify(mesesArray))
 //////////////////////////////////////////////////////
 			PROTOTYPE
 
-clases - modelo a seguir 
+clases - modelo a seguir
 objeto = es una instancia de una clase cuando ya tiene nombre ese objeto
  atributos = es una caracteristica o propiedad del objeto (son variables dentro de un objeto)
  metodos = son las acciones que un objeto puede realizar .
 
 objeto unico que hereda atributos para otras metodos ..
 
-Prototype = es como datos dentros de objetos para ser usado por metodos  con funciones .. por que con arrow no puede solo se usa local mente no globalmente 
-		tambien se puede usar la herencia de datos para otros prototypes 
+Prototype = es como datos dentros de objetos para ser usado por metodos  con funciones .. por que con arrow no puede solo se usa local mente no globalmente
+		tambien se puede usar la herencia de datos para otros prototypes
 
 clases = es casi igual que prototype  solo que se diferencia en herencia para heredar  usan la palabra "extends classObjeto anterior"
 
-privado y publico = a la variable se pone un # para que sea privado por ejemplo : #nombre  solo se puede acceder por la clase 
+privado y publico = a la variable se pone un # para que sea privado por ejemplo : #nombre  solo se puede acceder por la clase
 
 
 
@@ -1538,72 +1539,78 @@ mySet.has(5);    // false, 5 fue eliminado
 
 mySet.size; // 4, sólo removimos un valor
 console.log(mySet);// Set {1, "some text", Object {a: 1, b: 2}, Object {a: 1, b: 2}}
-```
+````
 
-* Un set te permite crear una lista de valores sin duplicados.
+- Un set te permite crear una lista de valores sin duplicados.
 
 Pocas veces los veo que se utilizan, muchas personas prefieren crear arreglos y evitar duplicados, pero sería más sencillo con un set... de hecho en algunas ocasiones termina siendo mejor opción que un arreglo o un objeto...
 
 ```javascript
 let carrito = new Set();
-carrito.add('Camisa');
-carrito.add('Disco #1');
-carrito.add('Disco #2');
-carrito.add('Disco #3');
-carrito.add('Disco #3');
+carrito.add("Camisa");
+carrito.add("Disco #1");
+carrito.add("Disco #2");
+carrito.add("Disco #3");
+carrito.add("Disco #3");
 console.log(carrito.size);
 ```
 
-* En un arreglo
+- En un arreglo
+
 ```javascript
-let numeros = new Set([1,2,3,4,5,6,7,3,3,3,3]);
+let numeros = new Set([1, 2, 3, 4, 5, 6, 7, 3, 3, 3, 3]);
 console.log(numeros.size);
 ```
 
-
 ```javascript
 let carrito = new Set();
-carrito.add('Camisa');
-carrito.add('Disco #1');
-carrito.add('Disco #2');
-carrito.add('Disco #3');
-carrito.add('Disco #3');
+carrito.add("Camisa");
+carrito.add("Disco #1");
+carrito.add("Disco #2");
+carrito.add("Disco #3");
+carrito.add("Disco #3");
 ```
 
-* Comprobando que un valor existe en el set.
+- Comprobando que un valor existe en el set.
+
 ```javascript
-console.log( carrito.has('Camisa') );
+console.log(carrito.has("Camisa"));
 ```
 
-* Eliminando del set
+- Eliminando del set
+
 ```javascript
-console.log( carrito.delete('Camisa') );
-console.log( carrito.has('Camisa') );
+console.log(carrito.delete("Camisa"));
+console.log(carrito.has("Camisa"));
 console.log(carrito);
 ```
 
-* Limpiar un set
+- Limpiar un set
+
 ```javascript
 carrito.clear();
 console.log(carrito);
 ```
 
-* Foreach a un set
+- Foreach a un set
+
 ```javascript
-carrito.forEach(producto =>  {
-    console.log(producto);
-})
+carrito.forEach((producto) => {
+  console.log(producto);
+});
 ```
 
-* Foreach a un set
+- Foreach a un set
+
 ```javascript
-carrito.forEach((producto, index, pertenece) =>  {
-    console.log(`${index} : ${producto}`);
-    console.log(pertenece  === carrito); // nombre de la variable
-})
+carrito.forEach((producto, index, pertenece) => {
+  console.log(`${index} : ${producto}`);
+  console.log(pertenece === carrito); // nombre de la variable
+});
 ```
 
- * Convertir un set a un arreglo...
+- Convertir un set a un arreglo...
+
 ```javascript
 const arregloCarrito = [...carrito];
 console.log(arregloCarrito);
