@@ -1475,44 +1475,62 @@ const meses = JSON.parse( localStorage.getItem('meses'));
 console.log(meses);
 
 ////////////////////////////////////////////////////
-			LOCALSTORAGE REMOVER ACTUALIZAR Y ELIMINAR
+# LOCALSTORAGE 
+### REMOVER ACTUALIZAR Y ELIMINAR
 
-// En este video veamos como eliminar elementos del storage...
+* Aca vamos a ver como eliminar elementos del local storage...
 
+```javascript
 localStorage.removeItem('nombre');
+```
 
-// En cuanto a toda laf uncionalidad d eun CRUD, nos haria falta un update, no hay como tal un Update... lo que podrías hacer es...
+* En cuanto a toda laf uncionalidad d eun CRUD, nos haria falta un update, no hay como tal un Update... lo que podrías hacer es...
 
+```javascript
 const mesesArray = JSON.parse(localStorage.getItem('meses'));
 console.log(mesesArray)
+```
 
-// agrega
+* agregar
+```javascript
 mesesArray.push('nuevo Mes');
 console.log(mesesArray);
-// actualiza el localstorage
+```
+* actualiza el localstorage
+```javascript
 localStorage.setItem('meses', JSON.stringify(mesesArray))
+```
 
-// elimina
-//localStorage.clear();
+* eliminar
+```javascript
+localStorage.clear();
+```
 
 
 # PROTOTYPE
 
-**Clases** - Modelo a seguir
+### **Clases**:
+Modelo a seguir 
 
-**Objeto**: Es una instancia de una clase cuando ya tiene nombre ese objeto.
+### **Objeto**: 
+Es una instancia de una clase cuando ya tiene nombre ese objeto. 
 
-**atributos**: Es una caracteristica o propiedad del objeto (son variables dentro de un objeto)
+### **atributos**: 
+Es una caracteristica o propiedad del objeto (son variables dentro de un objeto)
 
-**Metodos**: Son las acciones que un objeto puede realizar objeto unico que hereda atributos para otras metodos.
+### **Metodos**: 
+Son las acciones que un objeto puede realizar objeto unico que hereda atributos para otras metodos.
 
-**Prototype**: Son como datos dentro de objetos para ser usado por metodos  con funciones. Por que con arrow no puede, solo se usa local mente no globalmente.
+### **Prototype**: 
+Son como datos dentro de objetos para ser usado por metodos  con funciones. Por que con arrow no puede, solo se usa local mente no globalmente.
 
 * Tambien se puede usar la herencia de datos para otros prototypes
 
-**Clases**: Es casi igual que prototype  solo que se diferencia en herencia para heredar  usan la palabra "extends classObjeto anterior"
+### **Clases**: 
+Es casi igual que prototype  solo que se diferencia en herencia para heredar  usan la palabra "extends classObjeto anterior"
 
-**Privado y Publico**: la variable se pone un # para que sea privado por ejemplo : #nombre  solo se puede acceder por la clase
+### **Privado y Publico**: 
+A la variable se lepone un # para que sea privado por ejemplo : #nombre  solo se puede acceder por la clase
 
 
 
