@@ -1537,19 +1537,25 @@ carrito.add('Disco #3');
 carrito.add('Disco #3');
 
 
-// Comprobando que un valor existe en el set.
+* Comprobando que un valor existe en el set.
+```javascript
 console.log( carrito.has('Camisa') );
+```
 
-// Eliminando del set
+* Eliminando del set
+```javascript
 console.log( carrito.delete('Camisa') );
 console.log( carrito.has('Camisa') );
 console.log(carrito);
+```
 
-// Limpiar un set
+* Limpiar un set
+```javascript
 carrito.clear();
 console.log(carrito);
+```
 
-// Foreach a un set
+* Foreach a un set
 ```javascript
 carrito.forEach(producto =>  {
     console.log(producto);
