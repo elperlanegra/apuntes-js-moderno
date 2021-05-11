@@ -1459,22 +1459,30 @@ localStorage.setItem('productoJSON', productoString);
  const meses = ['Enero', 'Febrero', 'Marzo'];
 localStorage.setItem('meses',  JSON.stringify(meses));
 //////////////////////////////////////////////////////
-			LOCALSTORAGE OBTENER DATOS
 
-// En este video veamos como obtener lo sdatos de Local storage
-// esto es para obtener el valor
+
+# LOCALSTORAGE OBTENER DATOS
+ 
+### Aca vamos aprender como obtener los datos de Local storage
+* Esto es para obtener el valor
+
+```javascript
 const nombre = localStorage.getItem('nombre');
 console.log(nombre);
+```
 
-// obetener el STRING y pasarlo a OBJETO
+*  Obetener el STRING y pasarlo a OBJETO
+```javascript
 const productoJSON = localStorage.getItem('productoJSON');
 console.log(JSON.parse( productoJSON ));
+```
 
-// de STRING a ARREGLO
+*  De STRING a ARREGLO
+```javascript
 const meses = JSON.parse( localStorage.getItem('meses'));
 console.log(meses);
+```
 
-////////////////////////////////////////////////////
 # LOCALSTORAGE 
 ### REMOVER ACTUALIZAR Y ELIMINAR
 
