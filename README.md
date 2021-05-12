@@ -200,7 +200,8 @@ console.log(enlace.parentElement.parentElement)//= También puedes ir al padre d
 console.log(enlace.nextElementSibling); //= siguiente si esta en el mismo nivel esto se llama TRAVERSING
 console.log(enlace.nextElementSibling.nextElementSibling); //= pasara 2 veces el siguiente
 
-## onsole.log(ultimoCard.previousElementSibling);//= También hay una forma de ir digamos en la otra dirección... VAMOS A la posicion 4 y esto nos dirigira al 3
+//= También hay una forma de ir digamos en la otra dirección... VAMOS A la posicion 4 y esto nos dirigira al 3
+## console.log(ultimoCard.previousElementSibling);
 
 primerEnlace.remove(); = REMUEVE el enlace selecionado
 
