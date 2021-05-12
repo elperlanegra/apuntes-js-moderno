@@ -1,7 +1,5 @@
 ﻿
-
-
-<img src="banner.png" height="250px" width="900px"  />
+<img src="banner.png" height="200px" width="900px"  />
 
 # Apuntes de JavaScript
 
@@ -236,40 +234,44 @@ if( footer.classList.contains('activo') ) { // Constaind busca si es que esta de
 
 DOMContentLoaded' = espera q todo cargue y luego muestra ..
 
-TECLADO
-// keydown - cuando presionas una tecla
-// keyup - Cuando sueltas la tecla...
-// blur - cuando sales del input - ideal para validación...
-// También hay eventos para cortar copiar y pegar
+# TECLADO
+* keydown - cuando presionas una tecla
+* keyup - Cuando sueltas la tecla...
+* blur - cuando sales del input - ideal para validación...
+* También hay eventos para cortar copiar y pegar
+# 
+*  cut cuando cortan
+* copy
+*  paste cuando pegas algo
+* input - cuando se ejecutan todas las que aquí se muestran...
+* incluyendo cortar, pegar y copiar menos el blur
+* e = a o leer evento
 
-// cut cuando cortan
-// copy
-// paste cuando pegas algo
-// input - cuando se ejecutan todas las que aquí se muestran... incluyendo cortar, pegar y copiar menos el blur
-// e = a o leer evento
+# MAUSE
+* mousedown - cuando presionamos
+* click - similar, de hecho es probablemente el más utilizado..
+* dbclick - doble click como cuando quieres abrir un archivo
+* mouseup - al soltar
+* mauseenter - cuando pasas sobre el
+* mauseout -cuando sales sobre el
 
-MAUSE
-// mousedown - // cuando presionamos
-// click - similar, de hecho es probablemente el más utilizado..
-// dbclick - doble click como cuando quieres abrir un archivo
-// mouseup - al soltar
-// mauseenter - cuando pasas sobre el
-// mauseout -cuando sales sobre el
-
-SUBMIT
-es como cuando alguien preciona el boton o input que tiene el SUBMIT
+# SUBMIT
+Es como cuando alguien preciona el boton o input que tiene el SUBMIT
 
 E.PREVENTDEFAULT()
-e.preventDefault(); // PreventDefault es evitar que el navegador realice la acción por default, en este caso ir al action...
+```javascript
+e.preventDefault(); // PreventDefault es evitar que el navegador realice la acción por default, en este caso ir al action.
 
-     //  e.preventDefault();  previene la accion que tenia q hacer y le damos una nueva accion nosotros o lo q requerimos
+    //  e.preventDefault();  previene la accion que tenia q hacer y le damos una nueva accion nosotros o lo q requerimos.
 
-    // Usualmente utilizaras preventDefault para validar el formulario antes de enviarlo a un servidor
+    // Usualmente utilizaras preventDefault para validar el formulario antes de enviarlo a un servidor.
 
-    // Crear consultas Ajax entre otras cosas o api antes de ir al enlace predestinado
+    // Crear consultas Ajax entre otras cosas o api antes de ir al enlace predestinado.
 
-e.target.method = saber que metodo usa si usa POST
-e.target.action = que accion hace o dnde dirije ese enlace
+e.target.method //saber que metodo usa si usa POST.
+e.target.action // que accion hace o dnde dirije ese enlace.
+```
+
 
 SCROLL
 window.scrollY = cuantos pixeles hay de arriba y ir bajando
