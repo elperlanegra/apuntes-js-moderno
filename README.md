@@ -504,62 +504,73 @@ const carrito = [
 ```
 
 
-// En el caso de un arreglo de objetos... .includes no es la mejor opción, podrías utilizar uno llamado .some
-// forma nueva para OBJETOS
+* En el caso de un arreglo de objetos... .includes no es la mejor opción, podrías utilizar uno llamado .some
+> forma nueva para OBJETOS
 
+```javascript
 const existe = carrito.some( producto => producto.nombre === 'Celular' );
 console.log(existe);
+```
 
-/////////////////////////////////
-includes""""""""""""""""""""
-forma nueva
-// O también podrías utilizar el Array Method de .includes
-// Cambiar a Diciembre... confirma dentro de una array solo include funciona bien para array
 
+
+# Includes
+##### Forma nueva
+*  O también podrías utilizar el Array Method de .includes
+* Cambiar a Diciembre... confirma dentro de una array solo include funciona bien para array
+
+```javascript
 const resultado = meses.includes('Enero');
 
 console.log(resultado);
 
-///////////////////////////////// forma vieja
+// forma vieja
 meses.forEach(mes => {
-if(mes === 'Enero') {
-console.log('Enero si existe...')
-}
+    if(mes === 'Enero') {
+        console.log('Enero si existe...')
+    }
 })
+```
 
-//////////////////////////////
-// FindIndex """"""
-te dirá el indice es decir la ubicación del elemento en el arreglo...
-// Cambiar a Diciembre, Tendremos ""-1"" eso quiere decir que no lo encontró
 
+
+# FindIndex
+* te dirá el indice es decir la ubicación del elemento en el arreglo...
+*  Cambiar a Diciembre, Tendremos ""-1"" eso quiere decir que no lo encontró
+
+```javascript
 const indice = meses.findIndex( mes => mes === 'Abril' );
 console.log(indice);
+```
 
-/////////////////////////////////////////////////////////
 
-// Supongamos que tenemos nuestro carrito de compras y queremos decirle al usuario cuanto es el total a pagar...
+
+* Supongamos que tenemos nuestro carrito de compras y queremos decirle al usuario cuanto es el total a pagar...
 
 // Con un foreach lo podrías hacer asi...
+```javascript
 const carrito = [
-{ nombre: 'Monitor 20 Pulgadas', precio: 500},
-{ nombre: 'Televisión 50 Pulgadas', precio: 700},
-{ nombre: 'Tablet', precio: 300},
-{ nombre: 'Audifonos', precio: 200},
-{ nombre: 'Teclado', precio: 50},
-{ nombre: 'Celular', precio: 500},
-{ nombre: 'Bocinas', precio: 300},
-{ nombre: 'Laptop', precio: 800},
+    { nombre: 'Monitor 20 Pulgadas', precio: 500},
+    { nombre: 'Televisión 50 Pulgadas', precio: 700},
+    { nombre: 'Tablet', precio: 300},
+    { nombre: 'Audifonos', precio: 200},
+    { nombre: 'Teclado', precio: 50},
+    { nombre: 'Celular', precio: 500},
+    { nombre: 'Bocinas', precio: 300},
+    { nombre: 'Laptop', precio: 800},
 ];
 
 let total = 0;
-carrito.forEach( producto => total += producto.precio ); //
+carrito.forEach( producto => total += producto.precio ); 
 console.log(total);
+```
+
 
 ////////////////////////////////////////////////////
 REDUCE""""""""
 // Puedes ver que si bien no se ve mal, podemos tenerlo todo en una sola linea con un .reduce
 
-                            // total, actual seria como un cuando creamos producto bueno este seria un deposito de numeros eso es el reduce
+// total, actual seria como un cuando creamos producto bueno este seria un deposito de numeros eso es el reduce
 
 let resultado = carrito.reduce((total, producto) => total + producto.precio, 0); //0 es el inicio si pongo 2000 iniciara la suma despues de los 2000
 console.log( resultado );
@@ -594,91 +605,114 @@ const resultado2 = carrito.find( producto => producto.nombre === 'Bocinas');
 console.log(resultado2);
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// En este video estaremos viendo every...
+#### En este video estaremos viendo every...
 
-// Every es raro, ya que todos los elementos del arreglo deberán cumplir esa condición..
+*  Every es raro, ya que todos los elementos del arreglo deberán cumplir esa condición..
+
+```javascript
 const carrito = [
-{ nombre: 'Monitor 20 Pulgadas', precio: 500},
-{ nombre: 'Televisión 50 Pulgadas', precio: 700},
-{ nombre: 'Tablet', precio: 300},
-{ nombre: 'Audifonos', precio: 200},
-{ nombre: 'Teclado', precio: 50},
-{ nombre: 'Celular', precio: 500},
-{ nombre: 'Bocinas', precio: 300},
-{ nombre: 'Laptop', precio: 800},
+    { nombre: 'Monitor 20 Pulgadas', precio: 500},
+    { nombre: 'Televisión 50 Pulgadas', precio: 700},
+    { nombre: 'Tablet', precio: 300},
+    { nombre: 'Audifonos', precio: 200},
+    { nombre: 'Teclado', precio: 50},
+    { nombre: 'Celular', precio: 500},
+    { nombre: 'Bocinas', precio: 300},
+    { nombre: 'Laptop', precio: 800},
 ];
+```
 
-// con un foreach seria algo asi...
+* con un foreach seria algo asi...
+```javascript
 let cumple = true;
 carrito.forEach( producto => {
-if(producto.precio > 700) {
-cumple = false;
-return
-}
-})
+    if(producto.precio > 700) {
+        cumple = false;
+        return
+    }
+    })
+
 console.log(cumple);
 
 const resultado = carrito.every(producto => producto.precio < 1000); // Mil se cumple, 700 no...
 console.log(resultado);
 
+```
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
-// En este video veremos como unir 2 arreglos, para ello existe un arreay method llamado .concat
+####  En este video veremos como unir 2 arreglos, para ello existe un arreay method llamado .concat
 
+```javascript
 const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'];
 const meses2 = ['Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+```
 
-// Unir 2 arreglos con concat...
+* Unir 2 arreglos con concat...
+```javascript
 const meses3 = meses.concat(meses2);
 console.log(meses3);
+```
 
-// Existe otra forma... que es con rest operator o spread operator..
+* Existe otra forma... que es con rest operator o spread operator..
+```javascript
 const meses4 = [...meses,...meses2 ,'otromes']; // Tienes que asegurarte de que sean arrays cuando usas ... 'Otro mes'
 console.log(meses4)
+```
 
-/////////////////////////////////////////
-REST OPERATOR (...) """"""""""""""""""""""""""""
-// Un poco más sobre el rest operator...
+# REST OPERATOR (...)
+*  Un poco más sobre el rest operator...
 
-// El rest operator es muy útil para crear un nuevo arreglo sin modificar el original...
+*  El rest operator es muy útil para crear un nuevo arreglo sin modificar el original...
+```javascript
 const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'];
 
 const carrito = [
-{ producto: 'Monitor 20 Pulgadas', precio: 500},
-{ producto: 'Televisión 50 Pulgadas', precio: 700},
-{ producto: 'Tablet', precio: 300},
-{ producto: 'Audifonos', precio: 200},
-{ producto: 'Teclado', precio: 50},
-{ producto: 'Celular', precio: 500},
-{ producto: 'Bocinas', precio: 300},
-{ producto: 'Laptop', precio: 800},
+    { producto: 'Monitor 20 Pulgadas', precio: 500},
+    { producto: 'Televisión 50 Pulgadas', precio: 700},
+    { producto: 'Tablet', precio: 300},
+    { producto: 'Audifonos', precio: 200},
+    { producto: 'Teclado', precio: 50},
+    { producto: 'Celular', precio: 500},
+    { producto: 'Bocinas', precio: 300},
+    { producto: 'Laptop', precio: 800},
 ];
+```
 
-// Si tienes 2 arreglos los unes como vimos en el video anterior, pero digamos que tienes un arreglo y quieres añadir un elemento al final que es un string utilizarias...
+*  Si tienes 2 arreglos los unes como vimos en el video anterior, pero digamos que tienes un arreglo y quieres añadir un elemento al final que es un string utilizarias.
 
+```javascript
 const meses2 = [...meses, 'Julio'];
 console.log(meses);
-console.log(meses2); // Recuerda esto no modifica el arreglo original como si haria push y eso es muy útil en un tipo de programación llamada funcional...
+console.log(meses2); // Recuerda esto no modifica el arreglo original como si haria push y eso es muy útil en un tipo de programación llamada funcional.
+```
 
-// O al inicio... en lugar de utilizar unshift,
+
+* O al inicio... en lugar de utilizar unshift,
+```javascript
 const meses3 = ['Julio',...meses ];
+```
 
-// O tal vez quieres añadir un objeto a un arreglo de objetos al final
+
+*  O tal vez quieres añadir un objeto a un arreglo de objetos al final
+```javascript
 const producto = {producto: 'Disco Duro', precio: 300};
 const carrito2 = [...carrito, producto];
 console.log(carrito2);
+```
 
-// o al inicio
+*  o al inicio
+```javascript
 const carrito3 = [producto, ...carrito];
 console.log(carrito3);
+```
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-DOM
-// 01- Vamos a abrir el capitulo 13-DOM y abrirlo en Live server
+# DOM
+* 01- Vamos a abrir el capitulo 13-DOM y abrirlo en Live server
 
-// Lo primero que haremos sera crear una carpeta llamada js / y en ella colocar el archivo scripts.js
+* Lo primero que haremos sera crear una carpeta llamada js / y en ella colocar el archivo scripts.js
 
+```javascript
 let elemento;
 
 elemento = document; // selecciona todo documento del html
@@ -710,6 +744,7 @@ elemento = document.scripts; // selecciona todas las scripst
 elemento = document.scripts[2].getAttribute('src');
 
 console.log(elemento);
+```
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -734,19 +769,22 @@ console.log(noExiste);
 
 ///////////////////////////////////////////////////////////////////
 
-    getElementById *********************************solo ID
+# getElementById *********************************solo ID
 
-// En este video estaremos viendo como seleccionar un elemento por su ID, recuerda los ID's solo se deben utilizar uno con ese mismo nombre por documento...
+* En este video estaremos viendo como seleccionar un elemento por su ID, recuerda los ID's solo se deben utilizar uno con ese mismo nombre por documento...
 
-const formulario = document.getElementById('formulario') ////;Añadir un ID 2 veces, seleccionara el primero que encuentre... si hay 2 id iguales
+```javascript
+const formulario = document.getElementById('formulario') //;Añadir un ID 2 veces, seleccionara el primero que encuentre... si hay 2 id iguales
 console.log(formulario);
 
-const noExiste = document.getElementById('no-existe'); ///// Si no exist eestará vacio
+const noExiste = document.getElementById('no-existe'); // Si no exist eestará vacio
 console.log(noExiste);
+```
+
 
 //////////////////////////////////////////////////////////////////
 
-    			querySelector ************************* clas y id retorna 1 y se usa como buscado de css
+querySelector class y id retorna 1 y se usa como buscado de css
 
 // querySelector va a retornar máximo 1 elemento, si hay múltiples coincidencias solo va a retornar el primero...
 
@@ -836,20 +874,24 @@ imagen.src = 'img/hacer2.jpg';
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    		CAMBIAR COLOR  AÑADIR CLASES Y ELIMINAR ¨**********************************************************************
+# CAMBIAR COLOR  AÑADIR CLASES Y ELIMINAR 
+* En JavaScript también es posible cambiar el CSS de un elemento, o agregar o quitar classes...
 
-// En JavaScript también es posible cambiar el CSS de un elemento, o agregar o quitar classes...
+* Vamos a cambiar el color de texto del h1
 
-// Vamos a cambiar el color de texto del h1
-
+```javascript
 const heading = document.querySelector('h1');
-
+```
 // y hay todo un objeto con propiedades CSS que puedes utilizar, si quieres conocerlas todas coloca...
-console.log(heading.style);
 
-// heading.style.backgroundColor = 'red'; // Nota como las propiedades que le puedes pasar, son similares a las de CSS, con la diferencia de que el guion se elimina y la segunda palabra su primer letra es mayuscula.
-// heading.style.textTransform = 'uppercase';
-// heading.style.fontFamily = 'Arial';
+```javascript
+console.log(heading.style);
+```
+```javascript
+heading.style.backgroundColor = 'red'; // Nota como las propiedades que le puedes pasar, son similares a las de CSS, con la diferencia de que el guion se elimina y la segunda palabra su primer letra es mayuscula.
+
+heading.style.textTransform = 'uppercase';
+heading.style.fontFamily = 'Arial';
 
 // Ahora yo no recomiendo que pongas style, ya que tu archivo JS será muy grande, otra desventaja es que la apariencia debe ser algo que sea responsabilidad del CSS, pero lo que si puedes hacer es agregar o quitar classes..
 
@@ -861,8 +903,7 @@ card.classList.add('nueva-clase'); // te permitirá añadir una clase.. // si de
 
 // ahora si deseas eliminar una clase utilizas.remove
 card.classList.remove('card'); // de la misma forma si deseas remover múltiples classes tendrías que hacerlo agregando una coma
-
-///////////////////////////////////////////////////////////////////////////////////////////////////
+```
 
 // -----------------------------------Traversing the DOM---------------------------------------------
 
