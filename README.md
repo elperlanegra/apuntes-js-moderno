@@ -21,7 +21,7 @@ encambio la declarada lee si esta primera la declaracion o al ultimo
 
 - El arrow busca globalmente y fuction dentro de la function
 
-#### ¿ Como eliminas un duplicado de una raid ?
+#### ¿ Como eliminas un duplicado de una array ?
 
 Elimino con set
 
