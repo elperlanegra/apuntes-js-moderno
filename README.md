@@ -273,33 +273,49 @@ e.target.action // que accion hace o dnde dirije ese enlace.
 ```
 
 
-SCROLL
-window.scrollY = cuantos pixeles hay de arriba y ir bajando
+# SCROLL
+**window.scrollY**: cuantos pixeles hay de arriba y ir bajando
 
-GETBOUNDINGCLIENTERECT
-.getBoundingClientRect(); // Este método te da el tamaño de un elemento y su ubicación respecto a la ubicación actual..en movimiento de html de arriba para abajo
+#### GETBOUNDINGCLIENTERECT
+```javascript
+.getBoundingClientRect();
+```
+* Este método te da el tamaño de un elemento y su ubicación respecto a la ubicación actual..en movimiento de html de arriba para abajo
 
-ONCLICK funcion
+# ONCLICK funcion
+```javascript
 parrafo3.onclick = nuevaFuncion(1); // nuevo click para dar una funcion
+```
 
+
+```javascript
 function nuevaFuncion(id) { // CUANDO A SIDO DADO UN CLICK mostrar id
 console.log('click..', id)
+```
 
-LOCAL STORAGE
-Local Storage solo soporta strings, no soporta arrays ni objetos pero puedes almacenarlos convirtiendolos a string..
 
-PROTOTYPE
-Prototype = es como datos dentros de objetos para ser usado por metodos con funciones .. por que con arrow no puede solo se usa local mente no globalmente
+# LOCAL STORAGE
+* **Local Storage** solo soporta strings, no soporta arrays ni objetos pero puedes almacenarlos convirtiendolos a string..
 
-herencia= de datos para otros prototypes usando create
+# PROTOTYPE
+* **Prototype** = es como datos dentros de objetos para ser usado por metodos con funciones .. por que con arrow no puede solo se usa local mente no globalmente
 
-CLASES
-clases = es casi igual que prototype solo que se diferencia en herencia para heredar usan la palabra "extends classObjeto anterior"
-y para agregar usan const juan = new cliente ('juan' , 400);
+**herencia** = de datos para otros prototypes usando create
+
+# CLASES
+**clases** = es casi igual que prototype solo que se diferencia en herencia para heredar usan la palabra "extends classObjeto anterior"
+y para agregar usan 
+
+```javascript
+const juan = new cliente ('juan' , 400);
+
 class Empresa extedes Cliente {
-}
 
-en herencia= usa SUPER() para ir al constructor padre.
+}
+```
+
+
+en herencia = usa SUPER() para ir al constructor padre.
 
 /////////////////////////////////////////////////////////////////////
 en un for loop como indetificas los pares y impares?
@@ -392,18 +408,24 @@ i++;
 // Ahora, lo que hace diferente a un while de un for o un do while, es que al menos se va a ejecutar una vez aunque la condición no se cumpla...
 
 /////////////////////////////////////////////////////////////////////////////////////
-// Bueno veamos otros iteradores que existen en JavaScript, previamente ya habiamos visto forEach y Map, vamos a verlos en este video y sus diferencias...
+* Bueno veamos otros iteradores que existen en JavaScript, previamente ya habiamos visto forEach y Map, vamos a verlos en este video y sus diferencias...
 
+```javascript
 let pendientes = ['Tarea', 'Comer', 'Proyecto', 'Estudiar JavaScript'];
+```
 
-// Recorrer por un Foreach
+
+* Recorrer por un Foreach
+```javascript
 pendientes.forEach( (pendiente, index) => {
 console.log(`${index} : ${pendiente}`);
 });
+```
 
-// Recuerda que como es una sola linea, la llave es opcional...
+*  Recuerda que como es una sola linea, la llave es opcional...
 
-// Recorrer arreglo de objetos
+* Recorrer arreglo de objetos
+```javascript
 const carrito = [
 {id: 1, producto: 'Libro' },
 {id: 2, producto: 'Camisa'},
@@ -413,7 +435,7 @@ const carrito = [
 carrito.forEach( producto => {
 console.log(`Agregaste ${producto}`);
 });
-
+```
 // Lo mismo aplica para los maps, la sintaxis es la misma, solo recuerda, el map te crea un nuevo arreglo,
 si solo deseas recorrer los elementos utiliza el Foreach, si requieres crear un nuevo arreglo, sin duda el map sera mejor...
 //////////////////////////////////////////////////////////////////////////////////////////////
@@ -422,53 +444,65 @@ si solo deseas recorrer los elementos utiliza el Foreach, si requieres crear un 
 // For of no es como un for tradicional que ejecuta una pieza de código mientras una condición sea verdadera,
 este ejecuta mientras haya elementos por iterrar como puede ser un arreglo y otros llamados Maps y Sets que veremos más adelante...
 
+```javascript
 let pendientes = ['Tarea', 'Comer', 'Proyecto', 'Estudiar JavaScript'];
 
 for (let pendiente of pendientes) {
 console.log(pendiente);
 }
+```
 
-// Sin duda una forma más sencilla que un foreach y un for no?
-/////////////////////////////////////////////////////////////////////////////////////////////////
 
+*  Sin duda una forma más sencilla que un foreach y un for no?
+
+```javascript
 const carrito = [
-{id: 1, producto: 'Libro' },
-{id: 2, producto: 'Camisa'},
-{id: 3, producto: 'Disco'}
+    {id: 1, producto: 'Libro' },
+    {id: 2, producto: 'Camisa'},
+    {id: 3, producto: 'Disco'}
 ];
+```
 
+```javascript
 for (let producto of carrito) {
-console.log(producto.producto);
-// va a traer lo q es LIBRO camisa y disco por q OF
-va por lo q esta dentro en una array tambien iria por lo q esta adentro no lo indice
-
+    console.log(producto.producto);
+    // va a traer lo q es LIBRO camisa y disco por q OF
+    //va por lo q esta dentro en una array tambien iria por lo q esta adentro no lo indice
 }
+```
 
+
+```javascript
 let automovil = {
-modelo: 'Camaro',
-motor: '6.0',
-anio: '1969',
-marca: 'Chevrolet'
+    modelo: 'Camaro',
+    motor: '6.0',
+    anio: '1969',
+    marca: 'Chevrolet'
 }
 for(let auto in automovil) {
-console.log(`${auto} : ${automovil[auto]}`);
+    console.log(`${auto} : ${automovil[auto]}`);
 }
-// aqui vemos q los indice son modelo , motor, anio,marca,
-IN va por el indice en un ARRAY iria por 1 . 2. 3 // tambien llamados como OBJETOS q son estos
+```
 
-///////////////////////////////////////////////////////////////////////////////////////////
-"""""""""some"""""""""""""""""""""
+* aqui vemos q los indice son modelo , motor, anio,marca,
+IN va por el indice en un ARRAY iria por 1 . 2. 3 
+* tambien llamados como OBJETOS q son estos
 
+# """"""""" Some """""""""""""""""""""
+
+```javascript
 const carrito = [
-{ nombre: 'Monitor 20 Pulgadas', precio: 500},
-{ nombre: 'Televisión 50 Pulgadas', precio: 700},
-{ nombre: 'Tablet', precio: 300},
-{ nombre: 'Audifonos', precio: 200},
-{ nombre: 'Teclado', precio: 50},
-{ nombre: 'Celular', precio: 500},
-{ nombre: 'Bocinas', precio: 300},
-{ nombre: 'Laptop', precio: 800},
+    { nombre: 'Monitor 20 Pulgadas', precio: 500},
+    { nombre: 'Televisión 50 Pulgadas', precio: 700},
+    { nombre: 'Tablet', precio: 300},
+    { nombre: 'Audifonos', precio: 200},
+    { nombre: 'Teclado', precio: 50},
+    { nombre: 'Celular', precio: 500},
+    { nombre: 'Bocinas', precio: 300},
+    { nombre: 'Laptop', precio: 800},
 ];
+```
+
 
 // En el caso de un arreglo de objetos... .includes no es la mejor opción, podrías utilizar uno llamado .some
 // forma nueva para OBJETOS
