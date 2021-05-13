@@ -435,3 +435,6 @@ Son la base de donde  otras clases podrían derivarse. A diferencia de una inter
 **Propiedades estáticas y propiedades de solo lectura**
 
 Al igual que las interfaces, podemos usar la palabra reservada readonly para marcar el miembro de una clase como solo lectura.
+
+
+## Enlaces de Interés
