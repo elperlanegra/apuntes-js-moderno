@@ -1,0 +1,42 @@
+
+047 https-reactnative.dev-docs-environment-setup
+https://reactnative.dev/docs/environment-setup
+
+047 Comando-para-crear-el-proyecto
+https://gist.github.com/Klerith/89d5288dec7ff254913453d26a63e981
+
+050 https-reactnative.dev-docs-components-and-apis
+https://reactnative.dev/docs/components-and-apis
+
+052 https-reactnative.dev-docs-touchableopacity
+https://reactnative.dev/docs/touchableopacity
+
+053 https-reactnative.dev-docs-stylesheet
+https://reactnative.dev/docs/stylesheet
+
+057 Shadow-generator-
+https://ethercreative.github.io/react-native-shadow-generator/
+
+057 https-reactnative.dev-docs-touchablenativefeedback-useforeground
+https://reactnative.dev/docs/touchablenativefeedback#useforeground
+
+048 https-reactnative.dev-docs-environment-setup
+https://reactnative.dev/docs/environment-setup
+
+048 Comando-para-crear-el-proyecto
+https://gist.github.com/Klerith/89d5288dec7ff254913453d26a63e981
+
+051 https-reactnative.dev-docs-components-and-apis
+https://reactnative.dev/docs/components-and-apis
+
+053 https-reactnative.dev-docs-touchableopacity
+https://reactnative.dev/docs/touchableopacity
+
+054 https-reactnative.dev-docs-stylesheet
+https://reactnative.dev/docs/stylesheet
+
+058 Shadow-generator-
+https://ethercreative.github.io/react-native-shadow-generator/
+
+058 https-reactnative.dev-docs-touchablenativefeedback-useforeground
+https://reactnative.dev/docs/touchablenativefeedback#useforeground
