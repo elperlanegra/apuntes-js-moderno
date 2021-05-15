@@ -908,24 +908,35 @@ card.classList.remove('card'); // de la misma forma si deseas remover múltiples
 
 // -----------------------------------Traversing the DOM---------------------------------------------
 
-// Todo en JavaScript esta conectado en el document, la forma en que te moverás entre diferentes elementos se le conoce como Traversing the DOM, ir recorriendolo..
+* Todo en JavaScript esta conectado en el document, la forma en que te moverás entre diferentes elementos se le conoce como Traversing the DOM, ir recorriendolo..
 
+```javascript
 const navegacion = document.querySelector('.navegacion');
 console.log(navegacion);
+```
 
-// Cada elemento en la navegación los diferentes elementos se les conoce como Nodos... y podrás listarlos de la siguiente forma...
 
+*  Cada elemento en la navegación los diferentes elementos se les conoce como Nodos... y podrás listarlos de la siguiente forma...
+
+```javascript
 console.log(navegacion.childNodes); // La diferencia es que childNodes te va a mostrar hasta los espacios en blanco, del html
+```
 
-// también existe algo llamado Children
+* también existe algo llamado Children
 
+```javascript
 console.log(navegacion.children) //children te muestra solo los elementos... del html
+```
 
-// Hay mucha información aqui...
+
+*  Hay mucha información aqui...
+```javascript
 console.log(navegacion.children[0].nodeType) // Tipo de Node = 1 es un eleemnto
 console.log(navegacion.children[0].nodeName) // Que etiqueta es...
+```
 
-// Por ejemplo si selecciono el primer card...
+
+*  Por ejemplo si selecciono el primer card...
 
 const card = document.querySelector('.card');
 console.log(card.nodeType);
@@ -972,7 +983,7 @@ navegacion.firstElementChild.textContent = 'Nuevo Enlace...'// Cambiar el primer
 
 -
 
-// En el video anterior vimos como hacer traversing de un elemento padre hacia el hijo, JavaScript también te permite seleccionar un elemento hijo e ir navegando hacia el padre...
+* En el video anterior vimos como hacer traversing de un elemento padre hacia el hijo, JavaScript también te permite seleccionar un elemento hijo e ir navegando hacia el padre...
 
 * vamos a seleccionar el primer enlace...
 ```javascript
