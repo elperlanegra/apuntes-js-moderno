@@ -938,9 +938,11 @@ console.log(navegacion.children[0].nodeName) // Que etiqueta es...
 
 *  Por ejemplo si selecciono el primer card...
 
+```javascript
 const card = document.querySelector('.card');
 console.log(card.nodeType);
 console.log(card.nodeName);
+
 
 // 1 = Elemento
 // 2 - Atributo
@@ -948,8 +950,8 @@ console.log(card.nodeName);
 // 8 - Commentario
 // 9 - Documento
 // 10 doctype
-
-// en javascript puedes seleccionar un elemento y navegar en sus diferentes elementos... por ejemplo el card...
+```
+*  en javascript puedes seleccionar un elemento y navegar en sus diferentes elementos... por ejemplo el card...
 
 console.log(card.children);
 console.log(card.children[1]);// Si quieres acceder a ese div con la clase de info puedes colocar...
@@ -960,15 +962,20 @@ console.log(card.children[1].children[1].textContent);// Acceder al titulo
 
 card.children[1].children[1].textContent = 'Cambiando el Texto con traversing...'// Modificar ese titulo con un traversing
 
-// Intenta cambiar el texto que dice concierto por algo más siguiendo esta sintaxis de ir navegando por el DOM...
+* Intenta cambiar el texto que dice concierto por algo más siguiendo esta sintaxis de ir navegando por el DOM...
 
-// No lo hemos visto, pero veamos por ejemplo como acceder a esa imagen...
+* No lo hemos visto, pero veamos por ejemplo como acceder a esa imagen...
+```javascript
 console.log(card.children);
 console.log(card.children[0]);
 console.log(card.children[0].src);
+```
 
-// Cambiar la imagen...
+*  Cambiar la imagen...
+```javascript
 card.children[0].src = 'img/hacer2.jpg';
+```
+
 
 // Children es una buena forma de acceder a los elementos por su posición, pero supongamos que de nuestra navegación queremos acceder al primer o último enlace...
 
