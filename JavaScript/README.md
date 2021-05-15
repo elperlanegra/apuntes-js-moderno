@@ -1068,76 +1068,108 @@ parrafo1.textContent = 'Concierto'; // inserta texto
 parrafo1.classList.add('categoria'); // fon-size tamaño
 parrafo1.classList.add('concierto'); // color
 
-// Segundo parrafo
+*  Segundo parrafo
+```javascript
 const parrafo2 = document.createElement('P');
 parrafo2.textContent = 'Concierto de Rock';
 parrafo2.classList.add('titulo'); // titulo clase dada por css y html letras grandes
+```
 
-// 3er parrafo...
+
+* 3er parrafo...
+```javascript
 const parrafo3 = document.createElement('p');
 parrafo3.textContent = '$800 por pesrona'; // precio
 parrafo3.classList.add('precio'); // sub titulo de css
+```
 
-// crear el div...
+
+* crear el div...
+```javascript
 const info = document.createElement('div'); // tiene la clase info llamaos a info y creamos un div
 info.classList.add('info'); // agrega el div a INFO
 
 info.appendChild(parrafo1) // agrega los parrafos anteriores
 info.appendChild(parrafo2)
 info.appendChild(parrafo3);
+```
 
-// Vamos a crear la imagen
+
+* Vamos a crear la imagen
+```javascript
 const imagen = document.createElement('img');
 imagen.src = 'img/hacer2.jpg';
 //imagen.alt = " texto alternativo";
-// Crear el Card..
+```
+
+* Crear el Card..
+```javascript
 const card = document.createElement('div');
 card.classList.add('card');
+```
 
-// Vamos a asignar la imagen al card...
+
+* Vamos a asignar la imagen al card...
+```javascript
 card.appendChild(imagen); // agregamos imagen al card
+```
 
-// y el info
+
+*  y el info
+```javascript
 card.appendChild(info);// agregamos info al card
+```
 
-// Insertarlo en el HTML...
+
+* Insertarlo en el HTML...
+```javascript
 const contenedor = document.querySelector('.hacer .contenedor-cards');
 contenedor.appendChild(card); // al inicio info
 // contenedor.insertBeforse(card , contenedor.children[0] ) // elegimos la posicion que queremos poner
 
 console.log(parrafo1);
 console.log(parrafo2);
+```
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
-MOSTRAR Y OCULAR BOTON CON CLASES CSS ACTIVO A DESATIVO ******\*\*******\*******\*\*******DOM
+
+### MOSTRAR Y OCULAR BOTON CON CLASES CSS ACTIVO A DESATIVO ******\*\*******\*******\*\*******DOM
 // No siempre estarás haciendo traversing a tu dom,
 
+```javascript
 const btnFlotante = document.querySelector('.btn-flotante'); // llamamos al boton
+```
+
 
 const footer = document.querySelector('.footer'); // llamamos es lo que sale para arriva
 
 btnFlotante.addEventListener('click', mostrarOcultarFooter); // cuando de click hacer funcion o evento
 
+```javascript
 function mostrarOcultarFooter() {
-if( footer.classList.contains('activo') ) { // Constaind busca si es que esta activo SINO ELSE AGREGA el ACTIVO y cuando vuelva a recorrer ya esta activo aqui y muestra recien el cuadro
-footer.classList.remove('activo'); // // remueve el activo
-this.classList.remove('activo'); // // remueve activo del boton y color
-this.textContent = 'Idioma y Moneda'; // cuando no esta activo
-} else {
-footer.classList.add('activo'); // agrega ACTIVO
-this.classList.add('activo'); // agrega la clase de activo y el color
-this.textContent = 'X Cerrar'; // cuando esta activo
+   if( footer.classList.contains('activo') ) { // Constaind busca si es que esta activo SINO ELSE AGREGA el ACTIVO y cuando vuelva a recorrer ya esta activo aqui y muestra recien el cuadro
+            footer.classList.remove('activo'); // // remueve el activo
+            this.classList.remove('activo'); // // remueve activo del boton y color
+            this.textContent = 'Idioma y Moneda'; // cuando no esta activo
+            } else {
+            footer.classList.add('activo'); // agrega ACTIVO
+            this.classList.add('activo'); // agrega la clase de activo y el color
+            this.textContent = 'X Cerrar'; // cuando esta activo
+        }
+    }
 }
-}
-}
-//////////////////////////////////////////////////////////////////////////////////////////////////
+```
 
-AQUI muestra el 1,3,2 el DOMContentLoaded espera q todo cargue
+
+
+* AQUI muestra el 1,3,2 el DOMContentLoaded espera q todo cargue
 console.log(1)
+```javascript
 document.addEventListener('DOMContentLoaded', () => {
 console.log(2);
 }) // Nota todos los eventos que hay disponibles
 console.log(3);
+```
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 MAUS **\*\*\*\***\*\***\*\*\*\***
