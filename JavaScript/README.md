@@ -974,14 +974,18 @@ navegacion.firstElementChild.textContent = 'Nuevo Enlace...'// Cambiar el primer
 
 // En el video anterior vimos como hacer traversing de un elemento padre hacia el hijo, JavaScript también te permite seleccionar un elemento hijo e ir navegando hacia el padre...
 
-// vamos a seleccionar el primer enlace...
+* vamos a seleccionar el primer enlace...
+```javascript
 const enlace = document.querySelector('a');
 console.log(enlace);
+```
 
-// Hay diferente sformas...
+* Hay diferente sformas...
 
+```javascript
 console.log(enlace.parentNode)
 console.log(enlace.parentElement)
+```
 
 // En algunos casos ambos van a dar el mismo resultado, en otros recuerda el espacio es importante...
 
@@ -1059,14 +1063,15 @@ alert('diste click') // hago mi funcion y llamo cuando den click
 
 console.log(enlace);
 
-// Vamos a crear un segundo ejemplo, crearemos uno de nuestros cards... sin duda será algo más complejo...
+* Vamos a crear un segundo ejemplo, crearemos uno de nuestros cards... sin duda será algo más complejo...
 
-// crear los 3 parrafos.
-
+* crear los 3 parrafos.
+```javascript
 const parrafo1 = document.createElement('P'); // crea los parrafos
 parrafo1.textContent = 'Concierto'; // inserta texto
 parrafo1.classList.add('categoria'); // fon-size tamaño
 parrafo1.classList.add('concierto'); // color
+```
 
 *  Segundo parrafo
 ```javascript
@@ -1137,14 +1142,13 @@ console.log(parrafo2);
 
 ```javascript
 const btnFlotante = document.querySelector('.btn-flotante'); // llamamos al boton
-```
+
 
 
 const footer = document.querySelector('.footer'); // llamamos es lo que sale para arriva
 
 btnFlotante.addEventListener('click', mostrarOcultarFooter); // cuando de click hacer funcion o evento
 
-```javascript
 function mostrarOcultarFooter() {
    if( footer.classList.contains('activo') ) { // Constaind busca si es que esta activo SINO ELSE AGREGA el ACTIVO y cuando vuelva a recorrer ya esta activo aqui y muestra recien el cuadro
             footer.classList.remove('activo'); // // remueve el activo
