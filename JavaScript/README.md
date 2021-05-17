@@ -794,26 +794,34 @@ elemento = document.scripts[2].getAttribute('src');
 console.log(elemento);
 ```
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+<hr>
 
 // Seleccionando el header...getElementsByClassName **\*\***\*\***\*\*** SOLO CLASES
 
-   // Todos tus selectores inician con document...
+// Todos tus selectores inician con document...
 // Es muy importante las mayusculas y minusculas...
-
+```javascript
 const header = document.getElementsByClassName('header'); // nos permite selecionar los que tenga un nombre y una clase y escribirlo como lo tenemos en el html
 console.log(header);
 
 const hero = document.getElementsByClassName('contenido-hero');
 console.log(hero);
+```
 
-// Como las classes se pueden repetir, obviamente todas las coincidencias de classes se asignaran a contenedores.
+
+* Como las classes se pueden repetir, obviamente todas las coincidencias de classes se asignaran a contenedores.
+```javascript
 const contenedores = document.getElementsByClassName('contenedor');
 console.log(contenedores);
+```
 
-// Si una clase no existe, no va a retornar nada... como una array vacia
+
+*  Si una clase no existe, no va a retornar nada... como una array vacia
+```javascript
 const noExiste = document.getElementsByClassName('no-existe');
 console.log(noExiste);
+```
+
 
 ///////////////////////////////////////////////////////////////////
 
