@@ -440,20 +440,25 @@ while (i < 10) { // condicion como no es menor el let es 100 entoces no seguira 
     i++; // incremento
 
 }
-//////////////////////////////////////////////////////////////////////////////////
-// Veamos otro iterador que es muy común en otros lenguajes y también en javascript, es el do while...
 
-// a diferencia del for y del while, el do while se ejecuta al menos una vez, y después verifica si la condición se cumple...
+<hr>
 
-// Do While va a correr al menos una vez.
+* Veamos otro iterador que es muy común en otros lenguajes y también en javascript, es el do while...
+
+*  a diferencia del for y del while, el do while se ejecuta al menos una vez, y después verifica si la condición se cumple...
+
+* Do While va a correr al menos una vez.
+```javascript
 let i = 0; // probar con 1000
 
 do {
-console.log(`Numero: ${i}`)
-i++;
+    console.log(`Numero: ${i}`)
+    i++;
 } while( i < 10 );
+```
 
-// Ahora, lo que hace diferente a un while de un for o un do while, es que al menos se va a ejecutar una vez aunque la condición no se cumpla...
+
+*  Ahora, lo que hace diferente a un while de un for o un do while, es que al menos se va a ejecutar una vez aunque la condición no se cumpla...
 
 /////////////////////////////////////////////////////////////////////////////////////
 * Bueno veamos otros iteradores que existen en JavaScript, previamente ya habiamos visto forEach y Map, vamos a verlos en este video y sus diferencias...
