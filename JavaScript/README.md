@@ -796,7 +796,7 @@ console.log(elemento);
 
 <hr>
 
-// Seleccionando el header...getElementsByClassName **\*\***\*\***\*\*** SOLO CLASES
+*  Seleccionando el header...getElementsByClassName **\*\***\*\***\*\*** SOLO CLASES
 
 // Todos tus selectores inician con document...
 // Es muy importante las mayusculas y minusculas...
