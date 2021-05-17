@@ -43,37 +43,44 @@ n.mostrarinfo();   // consola el nombre es rafael
 - this
 - object constructor
 
+```javascript
 function producto (nombre , precio){
-this.nombre = nombre;
-this.precio=precio;
-this.disponible = true;
+    this.nombre = nombre;
+    this.precio=precio;
+    this.disponible = true;
 }
 const producto2 = new producto ('monitor 24' , 5000);
 console.log(producto2);
 
 consola nomre : monito 24 , precio: 5000
+```
+
 
 /////////////////////////////////////////////////////
 
+```javascript
 console.log(objeto.keys(producto)); izquida muestra " nombre :"
 console.log(objeto.values(producto)); derecha muestra "rafael"
 console.log(objeto.entries(producto)); muestra en par nombre: rafael
-///////////////////////////////////////////////////
+
 const meses = [junio,julio]
 meses.push('octubre');// agrega
 console.table(meses);
 console.log(meses.length);
 
 for (let i= o ; i<meses.length; i++){
-console.log( meses[i]); // se veran todos
+    console.log( meses[i]); // se veran todos
 }
-/////////////////////////////////////////////////////////////////
-arrow function
+```
 
+/////////////////////////////////////////////////////////////////
+*  arrow function
+
+```javascript
 funtion () = a () =>
 
 const aprendiendo = function (){
-console.log('aprendiendo java');
+    console.log('aprendiendo java');
 }
 aprendiendo ();
 ............................................
@@ -85,34 +92,48 @@ const datos= (nombre)=>'el se llama ${nombre}';
 //2- aqui inserta a (nombre= rafael) 3- luego lo lleva a aqui${rafael}
 
 console.log (datos(rafael)); // 1- pone el nombre // El se llama rafael
-.............................................
+```
 
+.............................................
+```javascript
 const carrito = [
-{ nombre: 'Monitor 20 Pulgadas', precio: 500},
-{ nombre: 'Televisión 50 Pulgadas', precio: 700},
-{ nombre: 'Tablet ', precio: 300},
-{ nombre: 'Audifonos', precio: 200},
-{ nombre: 'Teclado', precio: 50},
-{ nombre: 'Celular', precio: 500},
+    { nombre: 'Monitor 20 Pulgadas', precio: 500},
+    { nombre: 'Televisión 50 Pulgadas', precio: 700},
+    { nombre: 'Tablet ', precio: 300},
+    { nombre: 'Audifonos', precio: 200},
+    { nombre: 'Teclado', precio: 50},
+    { nombre: 'Celular', precio: 500},
 ]
+```
 
 // map crea un nuevo arreglo y foreach no // crea const para q se almacencen hay // para ser llamado por consola
 // "PRODUCTO" es una nueva variable creada por asi decirlo para la los datos dentro de la ARAY
 
+```javascript
 const nuevoArray = carrito.map( producto => `Articulo: ${ producto.nombre } Precio: $ producto.precio} `)
+```
 
+```javascript
 carrito.forEach( producto => console.log( `Articulo: ${ producto.nombre } Precio: $ producto.precio} `));
 
 console.log(nuevoArray);
+```
 
-////////////////////////////// ANTES ARRIBA ARROW ///////////////////////
+
+### ANTES ARRIBA ARROW 
+```javascript
 const nuevoArray = carrito.map( function(producto) {
 return `Articulo: ${ producto.nombre } Precio: $ producto.precio} `;
 })
+```
 
+
+```javascript
 const nuevoArray2 = carrito.forEach( function(producto) {
 return `Articulo: ${ producto.nombre } Precio: $ producto.precio} `;
 })
+```
+
 
 /////////////////////////////////////////////////////////////////////////
 === = si o si es igual
@@ -177,6 +198,7 @@ card.classList.add('nueva-clase'); //= te permitirá añadir una clase.. // si d
 card.classList.remove('card'); // = de la misma forma si deseas remover múltiples classes tendrías que hacerlo agregando una coma
 
 -----------TRAVERSING THE DOM--------
+```javascript
 console.log(navegacion.childNodes); //= La diferencia es que childNodes te va a mostrar hasta los espacios en blanco, del ""html""
 console.log(navegacion.children) //=children te muestra solo los elementos... del ""html""
 
@@ -185,9 +207,12 @@ console.log(card.children[1]);//= Si quieres acceder a ese div con la clase de i
 console.log(card.children[1].children[1]);//= Si quieres accedera los elementos hijos de ese info... recuerda puedes anidar las propiedades.
 console.log(card.children[1].children[1].textContent);//= Acceder al titulo
 card.children[1].children[1].textContent = 'Cambiando el Texto con traversing...'//= Modificar ese titulo con un traversing
+
+```
 // Intenta cambiar el texto que dice concierto por algo más siguiendo esta sintaxis de ir navegando por el DOM...
 
-// Cambiar la imagen...
+*  Cambiar la imagen...
+```javascript
 console.log(card.children[0].src);
 card.children[0].src = 'img/hacer2.jpg';
 
@@ -200,40 +225,62 @@ console.log(enlace.parentElement.parentElement)//= También puedes ir al padre d
 console.log(enlace.nextElementSibling); //= siguiente si esta en el mismo nivel esto se llama TRAVERSING
 console.log(enlace.nextElementSibling.nextElementSibling); //= pasara 2 veces el siguiente
 
-//= También hay una forma de ir digamos en la otra dirección... VAMOS A la posicion 4 y esto nos dirigira al 3
-## console.log(ultimoCard.previousElementSibling);
+```
+* También hay una forma de ir digamos en la otra dirección... VAMOS A la posicion 4 y esto nos dirigira al 3
 
+```javascript
+console.log(ultimoCard.previousElementSibling);
+```
+
+
+```javascript
 primerEnlace.remove(); = REMUEVE el enlace selecionado
+```
 
+
+```javascript
 const borrar = navegacion.children[2]
 navegacion.removeChild(borrar); //= borra con const y asignacion de posicion
 
 APPENDCHILD""INSERTBEFORE
 navegacion.appendChild(enlace); // APPENDCHILD"" = es como crear nuevo hijo a NAVEGACION del menu por ejemplo y su nuevo hijo sera enlace
 navegacion.insertBefore(enlace, navegacion.children[1]); // INSERTBEFORE = colocar dentro del NAVEGACION la posicion que quiero poner mi nuevo ENLACEs
+```
 
-CREATEELEMENT
+
+*  CREATEELEMENT
+```javascript
 const enlace = document.createElement('A'); // si vamos a crear una etiqueta o generando archivos cosas d HTML
 
 enlace.href = '/nuevo-enlace'; // añadiendo HREF
 enlace.target = '\_blank' //\_blank : Carga la URL en un nuevo contexto de navegación
+
 enlace.classList.add('enlace'); // agregando nueva clase
 enlace.setAttribute('data-enlace', 'nuevo-enlace') // atributos de html
 enlace.onclick = miFuncion; // crear una funcion al dar click
 const navegacion = document.querySelector('.navegacion');
+
 // console.log(navegacion.children); // vemos la posiciones
 //navegacion.appendChild(enlace); // APPENDCHILD es como crear nuevo hijo a NAVEGACION del menu por ejemplo y su nuevo hijo sera enlace
+
 navegacion.insertBefore(enlace, navegacion.children[1]); // colocar dentro del NAVEGACION la posicion que quiero poner mi nuevo ENLACEs
-/_function miFuntion(){
+
+//_function miFuntion(){
 alert('diste click') // hago mi funcion y llamo cuando den click
 }_/
+```
+
 
 ADDEVENTLISTENER
+```javascript
 btnFlotante.addEventListener('click', mostrarOcultarFooter); // cuando de click hacer funcion o evento o agregar despues de la coma va , funcion
+
 CONTAINS
 if( footer.classList.contains('activo') ) { // Constaind busca si es que esta dentro de la clase CSS activo SINO ELSE AGREGA el ACTIVO y cuando vuelva a recorrer ya esta activo aqui y muestra recien el cuadro
 
 DOMContentLoaded' = espera q todo cargue y luego muestra ..
+```
+
 
 # TECLADO
 * keydown - cuando presionas una tecla
@@ -751,8 +798,8 @@ console.log(elemento);
 
 // Seleccionando el header...getElementsByClassName **\*\***\*\***\*\*** SOLO CLASES
 
-                // Todos tus selectores inician con document...
-                // Es muy importante las mayusculas y minusculas...
+   // Todos tus selectores inician con document...
+// Es muy importante las mayusculas y minusculas...
 
 const header = document.getElementsByClassName('header'); // nos permite selecionar los que tenga un nombre y una clase y escribirlo como lo tenemos en el html
 console.log(header);
@@ -844,36 +891,50 @@ console.log(formularios); // Puedes ver quue eso si funciona, sin embargo recuer
 const noExiste = document.querySelectorAll('#no-existe');
 console.log(noExiste);
 
-////////////////////////////////////////////////////////////////
-IMPRIMIENDO Y CAMBIANDO TEXTO Y IMAGENES **********\*\*\*\***********\***********\*\*\*\***********
+<hr>
 
+## IMPRIMIENDO Y CAMBIANDO TEXTO Y IMAGENES 
+
+```javascript
 const encabezado = document.querySelector('.contenido-hero h1');
 // console.log(encabezado);
+```
 
-// Si deseas acceder al texto hay 3 formas de hacerlo...
+
+* Si deseas acceder al texto hay 3 formas de hacerlo...
+```javascript
 console.log(encabezado.innerText); // si le ponemos a ese elemento visibility: hidden; en el CSS,
 console.log(encabezado.textContent); // entra al texto y modifica
 console.log(encabezado.innerHTML); // se trae el html
+```
 
-// Ahora, aquí puedes ver que estoy asignando el Texto a una variable, pero también puedes modificarlo de diferentes formas...
 
+* Ahora, aquí puedes ver que estoy asignando el Texto a una variable, pero también puedes modificarlo de diferentes formas...
+
+```javascript
 document.querySelector('.contenido-hero h1').textContent = 'Nuevo Heading'
+```
 
-// otra opción seria con una variable.
+* otra opción seria con una variable.
 
+```javascript
 const nuevoTexto = 'Nuevo Heading'; ///crea la constante y luego la lleva abajo
 document.querySelector('.contenido-hero h1').textContent = nuevoTexto;
+```
 
-// También puedes cambiar una imagen...
+* También puedes cambiar una imagen...
 
-// No lo hemos visto, pero veamos por ejemplo como acceder a esa imagen...
+* No lo hemos visto, pero veamos por ejemplo como acceder a esa imagen...
 
+```javascript
 const imagen = document.querySelector('.card img');
 console.log(imagen.src);
 // Cambiar la imagen...
 imagen.src = 'img/hacer2.jpg';
+```
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+<hr>
 
 # CAMBIAR COLOR  AÑADIR CLASES Y ELIMINAR 
 * En JavaScript también es posible cambiar el CSS de un elemento, o agregar o quitar classes...
@@ -906,7 +967,9 @@ card.classList.add('nueva-clase'); // te permitirá añadir una clase.. // si de
 card.classList.remove('card'); // de la misma forma si deseas remover múltiples classes tendrías que hacerlo agregando una coma
 ```
 
-// -----------------------------------Traversing the DOM---------------------------------------------
+<hr>
+
+# Traversing the DOM
 
 * Todo en JavaScript esta conectado en el document, la forma en que te moverás entre diferentes elementos se le conoce como Traversing the DOM, ir recorriendolo..
 
@@ -953,14 +1016,19 @@ console.log(card.nodeName);
 ```
 *  en javascript puedes seleccionar un elemento y navegar en sus diferentes elementos... por ejemplo el card...
 
+```javascript
 console.log(card.children);
-console.log(card.children[1]);// Si quieres acceder a ese div con la clase de info puedes colocar...
+console.log(card.children[1]);
+// Si quieres acceder a ese div con la clase de info puedes colocar...
 
 console.log(card.children[1].children[1]);// Si quieres accedera los elementos hijos de ese info... recuerda puedes anidar las propiedades.
 
 console.log(card.children[1].children[1].textContent);// Acceder al titulo
 
-card.children[1].children[1].textContent = 'Cambiando el Texto con traversing...'// Modificar ese titulo con un traversing
+card.children[1].children[1].textContent = 'Cambiando el Texto con traversing...'
+// Modificar ese titulo con un traversing
+```
+
 
 * Intenta cambiar el texto que dice concierto por algo más siguiendo esta sintaxis de ir navegando por el DOM...
 
@@ -976,9 +1044,9 @@ console.log(card.children[0].src);
 card.children[0].src = 'img/hacer2.jpg';
 ```
 
+* Children es una buena forma de acceder a los elementos por su posición, pero supongamos que de nuestra navegación queremos acceder al primer o último enlace...
 
-// Children es una buena forma de acceder a los elementos por su posición, pero supongamos que de nuestra navegación queremos acceder al primer o último enlace...
-
+```javascript
 console.log(navegacion.lastChild);
 console.log(navegacion.lastElementChild);
 
@@ -987,8 +1055,10 @@ console.log(navegacion.firstChild)// Si desesa acceder al primero
 console.log(navegacion.firstElementChild);// su deceas acceder al ultimo
 
 navegacion.firstElementChild.textContent = 'Nuevo Enlace...'// Cambiar el primer texto...
+```
 
--
+
+<hr>
 
 * En el video anterior vimos como hacer traversing de un elemento padre hacia el hijo, JavaScript también te permite seleccionar un elemento hijo e ir navegando hacia el padre...
 
@@ -1005,12 +1075,16 @@ console.log(enlace.parentNode)
 console.log(enlace.parentElement)
 ```
 
-// En algunos casos ambos van a dar el mismo resultado, en otros recuerda el espacio es importante...
+* En algunos casos ambos van a dar el mismo resultado, en otros recuerda el espacio es importante...
 
+```javascript
 console.log(enlace.parentElement.parentElement)// También puedes ir al padre del padre... y de hijo a padre
+```
 
-// En JavaScript también es posible de hacer traversing a elementos que estan en el mismo nivel , digamos el vecino aunque en javascript se les conoce como hermanos...
 
+* En JavaScript también es posible de hacer traversing a elementos que estan en el mismo nivel , digamos el vecino aunque en javascript se les conoce como hermanos...
+
+```javascript
 console.log(enlace);
 console.log(enlace.nextElementSibling); // siguiente si esta en el mismo nivel esto se llama TRAVERSING
 console.log(enlace.nextElementSibling.nextElementSibling); // pasara 2 veces el siguiente
@@ -1021,49 +1095,67 @@ const ultimoCard = document.querySelector('.card:nth-child(4)');
 console.log(ultimoCard)
 
 console.log(ultimoCard.previousElementSibling);// También hay una forma de ir digamos en la otra dirección... VAMOS A la posicion 4 y esto nos dirigira al 3
+```
 
-///////////////////////////////////////////////////////////////////////////////////////
-// Después de una super extensa explicación de Traversing y acceder a elementos, veamos como eliminar elementos del DOM
-// Es muy común no? cuando borras una foto de facebook o un tweet se elimina automaticamente, también cuando quitas elementos del carrito de compras de amazon.
-// Cuando le diste me gusta a una foto por accidente y le quitas el like, también hay un cambio, así que sin duda eliminar elementos llega a ser muy común..
-// Hay 2 formas de eliminar, una es eliminar un elemento por si mismo y la otra es eliminarlo desde el padre...
+<hr>
 
+* Después de una super extensa explicación de Traversing y acceder a elementos, veamos como eliminar elementos del DOM
+* Es muy común no? cuando borras una foto de facebook o un tweet se elimina automaticamente, también cuando quitas elementos del carrito de compras de amazon.
+* Cuando le diste me gusta a una foto por accidente y le quitas el like, también hay un cambio, así que sin duda eliminar elementos llega a ser muy común..
+* Hay 2 formas de eliminar, una es eliminar un elemento por si mismo y la otra es eliminarlo desde el padre...
+
+```javascript
 const primerEnlace = document.querySelector('a');
 primerEnlace.remove();
+```
 
-// La otra forma es por el padre..
+
+* La otra forma es por el padre..
+```javascript
 const navegacion = document.querySelector('.navegacion');
 // console.log(navegacion.children);
 // navegacion.removeChild(navegacion.children[2]);// el sigueinte paso es identificar el elemento a borrar..
+```
 
-// Otra forma es creando una variable...
+
+* Otra forma es creando una variable...
+```javascript
 const borrar = navegacion.children[2]
 navegacion.removeChild(borrar);
+```
+* Como resumen recuerda hay 2 formas de eliminar elementos, uno es por el elemento por si mismo y el otro requiere el padre y la referencia del hijo..
 
-// Como resumen recuerda hay 2 formas de eliminar elementos, uno es por el elemento por si mismo y el otro requiere el padre y la referencia del hijo..
 
-//////////////////////////////////////////////////////////////////////////////////////
-AGREGANDO DIV IMAGENES AL DOM ****************\*\*****************\*\*\*****************\*\*****************
 
-// Finalmente otro tema importante cuando trabajas con el DOM, es la creación de HTML desde JavaScript..
+# AGREGANDO DIV IMAGENES AL DOM 
 
-// Cuando publicas un tweet, tienes un textarea que al enviarlo se agrega al listado de tweets, de ahi la gente comienza a darle me gusta, así que veamos como hacerlo generar HTML desde JavaScript...
+Finalmente otro tema importante cuando trabajas con el DOM, es la creación de HTML desde JavaScript..
 
-// Y no te preocupes si todo lo que vemos en este video no queda claro, estaremos practicando mucho lo que es el DOM Scripting ya con muchos otros proyectos...
+Cuando publicas un tweet, tienes un textarea que al enviarlo se agrega al listado de tweets, de ahi la gente comienza a darle me gusta, así que veamos como hacerlo generar HTML desde JavaScript...
 
-// Vamos a crear un nuevo enlace... lo primero que hay que hacer es crear el elemento HTML, en este caso un enlace...
+Y no te preocupes si todo lo que vemos en este video no queda claro, estaremos practicando mucho lo que es el DOM Scripting ya con muchos otros proyectos...
 
+Vamos a crear un nuevo enlace... lo primero que hay que hacer es crear el elemento HTML, en este caso un enlace...
+
+```javascript
 const enlace = document.createElement('A'); // si vamos a crear una etiqueta o generando archivos cosas d HTML
+```
+
 
 // Segundo paso es crear el texto del enlace no? lo haremos con textContent
 
+```javascript
 enlace.textContent = 'Nuevo Enlace'; // agrega un texto a la etiqueta
+```
 
+```javascript
 // Despues vamos a asignar una ruta
 enlace.href = '/nuevo-enlace'; // añadiendo HREF
+
 // Finalmente se agrega el enlace donde deseas mostrarlo...
 enlace.target = '\_blank' //\_blank : Carga la URL en un nuevo contexto de navegación
 // Si quieres agregar una clase
+
 enlace.classList.add('enlace'); // agregando nueva clase
 
 enlace.setAttribute('data-enlace', 'nuevo-enlace') // atributos de html
@@ -1073,6 +1165,7 @@ enlace.onclick = miFuncion; // crear una funcion al dar click
 const navegacion = document.querySelector('.navegacion');
 // console.log(navegacion.children); // vemos la posiciones
 //navegacion.appendChild(enlace); // APPENDCHILD es como crear nuevo hijo a NAVEGACION del menu por ejemplo y su nuevo hijo sera enlace
+
 navegacion.insertBefore(enlace, navegacion.children[1]); // colocar dentro del NAVEGACION la posicion que quiero poner mi nuevo ENLACEs
 
 /_function miFuntion(){
@@ -1080,6 +1173,8 @@ alert('diste click') // hago mi funcion y llamo cuando den click
 }_/
 
 console.log(enlace);
+```
+
 
 * Vamos a crear un segundo ejemplo, crearemos uno de nuestros cards... sin duda será algo más complejo...
 
@@ -1181,8 +1276,6 @@ function mostrarOcultarFooter() {
 }
 ```
 
-
-
 * AQUI muestra el 1,3,2 el DOMContentLoaded espera q todo cargue
 console.log(1)
 ```javascript
@@ -1193,28 +1286,36 @@ console.log(3);
 ```
 
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
-MAUS **\*\*\*\***\*\***\*\*\*\***
 
-// En este video estaremos viendo eventos que ocurren con el mouse
+# MOUSE
 
+* En este video estaremos viendo eventos que ocurren con el mouse
+
+```javascript
 const nav = document.querySelector('.navegacion');
+```
 
+```
 // vamos a registrar el eventListener para el nav..
-
+```
+```javascript
 nav.addEventListener('mouseenter', () => {
 console.log('entrando a navegacion')
 
     nav.style.backgroundColor = 'white'; // color
 
 });
+```
 
+
+```javascript
 nav.addEventListener('mouseout', () => {
 console.log('saliendo de la navegacion');
 
     nav.style.backgroundColor = 'transparent';
 
 })
+
 
 // otros eventos abarcan...
 
@@ -1225,7 +1326,7 @@ console.log('saliendo de la navegacion');
 // mauseenter - cuando pasas sobre el
 // mauseout -cuando sales sobre el
 
-
+```
 
 # TECLADO
 
