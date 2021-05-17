@@ -416,30 +416,34 @@ mostrar numero del 0 al 100
 // 5 10 15 20 25 ... BUZZ
 // 15 30 45 ... Fizz Buzz
 
+```javascript
 for(let i = 1; i < 100; i++ ) {
-if(i % 15 === 0) {
-console.log(`${i} FIZZ BUZZ`)
-} else if(i % 3 === 0) {
-console.log(`${i} fizz`);
-} else if ( i % 5 === 0 ) {
-console.log(`${i} buzz`)
+    if(i % 15 === 0) {
+        console.log(`${i} FIZZ BUZZ`)
+    } else if(i % 3 === 0) {
+        console.log(`${i} fizz`);
+    } else if ( i % 5 === 0 ) {
+    console.log(`${i} buzz`)
+    }
 }
-}
-////////////////////////////////////////////////////////////////////////////////////
+```
 
-// Otro iterador muy común es el while loop, este se ejecuta mientras una condición sea verdadera..
 
+
+<hr>
+
+*  Otro iterador muy común es el while loop, este se ejecuta mientras una condición sea verdadera..
+
+```javascript
 let i = 100;
 while (i < 10) { // condicion como no es menor el let es 100 entoces no seguira ejecutando no mostrara nada
 
-    // Bloque de código...
-    console.log(`Numero: ${i}`);
-
-
-
-    i++; // incremento
-
+// Bloque de código...
+console.log(`Numero: ${i}`);
+   i++; // incremento
 }
+```
+
 
 <hr>
 
